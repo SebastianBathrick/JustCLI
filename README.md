@@ -205,6 +205,7 @@ string filePath = CLIHelpers.GetFilePathFromUser("file");
 ## License
 
 Copyright © Sebastian Bathrick 2025. All Rights Reserved.
+
 This software is proprietary and confidential.
 Unauthorized use, modification, or distribution is strictly prohibited.
 For licensing inquiries, please contact sebastianbathrick@gmail.com.
