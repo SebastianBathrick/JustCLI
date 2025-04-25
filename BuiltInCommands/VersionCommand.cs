@@ -2,6 +2,9 @@
 
 namespace JustCLI.BuiltInCommands
 {
+    /// <summary>
+    /// Command that displays the version of the app in use (to be set by client.)
+    /// </summary>
     internal class VersionCommand : ICommand
     {
         private const string PLACEHOLDER_VERSION = "Unknown version";

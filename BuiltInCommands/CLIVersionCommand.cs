@@ -2,6 +2,9 @@
 
 namespace JustCLI.BuiltInCommands
 {
+    /// <summary>
+    /// Command that displays the version of the CLI, its author, and the GitHub URL.
+    /// </summary>
     internal class CLIVersionCommand : ICommand
     {
         private const string PLACEHOLDER_VERSION = "0.1-alpha";
@@ -16,9 +19,19 @@ namespace JustCLI.BuiltInCommands
 
         public void Execute(FlagEntries? flagEntries)
         {
-            Log.Logger.Information("JustCLI Version: {Version}", _version);
-            Log.Logger.Information("JustCLI Author: {Author}", "Sebastian Bathrick");
-            Log.Logger.Information("Github: {URL}", "https://github.com/SebastianBathrick/JustCLI");
+            Log.Information("[{VersionHeader}]", "VERSION INFO");
+            Log.Information("[JustCLI Version]: {Version}", _version);
+            Log.Information("[JustCLI Github]: {URL}", "https://github.com/SebastianBathrick/JustCLI");
+            Log.Information("");
+            var serilogAssembly = typeof(Serilog.Log).Assembly;
+            var version = serilogAssembly.GetName().Version;
+            Log.Information("[Serilog Version]: {Version}", version);
+            Log.Information("[Serilog Github]: {URL}", "https://github.com/serilog/serilog");
+            Log.Information("");
+            Log.Information("[{ContactHeader}]", "SUPPORT");
+            Log.Information("[Author]: {Author}", "Sebastian Bathrick");
+            Log.Information("[Email]: sebastianbathrick@gmail.com");
+            
         }
     }
 }

@@ -3,29 +3,29 @@ using Serilog;
 
 namespace JustCLI.BuiltInCommands
 {
+    /// <summary>
+    /// Command that displays help information for commands.
+    /// </summary>
     internal class HelpCommand : ICommand
     {
-        #region Constants & Variables
+        #region Constants
         private const string SCREEN_TITLE = "[CLI HELP]";
         private const string FLAGS_TITLE = "[ASSOCIATED FLAGS]";
         private const string COMMAND_TITLE = "[COMMAND]";
-
-        private const string DETAILED_FLAG = "detailed";    
+        private const string DETAILED_FLAG = "detailed";
+        #endregion
 
         private Flag[] _flags = [
             new Flag(DETAILED_FLAG, "Provides detailed command and flag descriptions.", false)
         ];
 
         private List<ICommand> _validCommands = new List<ICommand>();
-        #endregion
-
-        #region Properties
+        
         public string Name => "help";
 
         public string Description => "Displays help information for commands.";
 
         public Flag[] Flags => _flags;
-        #endregion
 
         /// <summary> 
         /// Adds a valid command to list when executed. Needs to be called in CommandLineApp's constructor. 
