@@ -7,7 +7,7 @@
     <authors>Sebastian Bathrick</authors>
     <projectUrl>https://github.com/SebastianBathrick/JustCLI/</projectUrl>
     <description>A lightweight CLI framework.</description>
-    <repository type="git" commit="2984d644c78f7a9fb1dd2ed562814ced4bb43c0e" />
+    <repository type="git" commit="2cb1c98cf80f27bc6804aebd59306d38b8bbe588" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Serilog" version="4.2.0" exclude="Build,Analyzers" />

@@ -84,33 +84,8 @@ namespace JustCLI
         public static void AddCommands(ICommand[] commands)
         {
             foreach (var command in commands)
-            {
-                if (IsCommandAlreadyAdded(command))
-                {
-                    Log.Error(
-                        "Attempted to add command named {Command} " +
-                        "but it conflicts with a pre-existing command.",
-                        command.Name
-                        );
-                }
-                else
+                if (!IsCommandAlreadyAdded(command))
                     _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
-
-                if (command.ShortHandName != null)
-                    AddCommandShorthand(command.ShortHandName, command);
-            }             
-        }
-
-        public static void AddCommandShorthand(string shorthand, ICommand command)
-        {
-            if(_instance._commandDict.ContainsKey(shorthand))
-            {
-                Log.Error(
-                    "Attempted to add shorthand version ({Command}), but it conflicts " +
-                    "with a pre-existing command.", shorthand
-                    );
-                return;
-            }
         }
 
         /// <summary> 
