@@ -1,0 +1,77 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider and VS Code settings
+.idea/
+.vscode/
+.vscode-test/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# ASP.NET temp files
+*.log
+*.vspscc
+*.vssscc
+
+# Publish results
+publish/
+*.Publish.xml
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.cache
+*.lock.json
+.nuget/
+packages/
+# Optional NuGet local repo
+*.nupkg
+
+# Project-specific
+*.db
+*.sqlite
+*.bak
+*.mdf
+*.ldf
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# VS for Mac
+*.userprefs
+
+# Auto-generated
+Generated_Code/
+
+# Logs
+*.log
+
+# Tools (optional)
+tools/

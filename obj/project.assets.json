@@ -96,11 +96,11 @@
   "project": {
     "version": "0.0.12-alpha",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
       "projectName": "JustCLInterface",
-      "projectPath": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
+      "projectPath": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
       "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\obj\\",
+      "outputPath": "C:\\Users\\Sebastian\\Documents\\JustCLI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
