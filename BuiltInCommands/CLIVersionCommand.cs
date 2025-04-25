@@ -23,7 +23,7 @@ namespace JustCLI.BuiltInCommands
             Log.Information("[JustCLI Version]: {Version}", _version);
             Log.Information("[JustCLI Github]: {URL}", "https://github.com/SebastianBathrick/JustCLI");
             Log.Information("");
-            var serilogAssembly = typeof(Serilog.Log).Assembly;
+            var serilogAssembly = typeof(Log).Assembly;
             var version = serilogAssembly.GetName().Version;
             Log.Information("[Serilog Version]: {Version}", version);
             Log.Information("[Serilog Github]: {URL}", "https://github.com/serilog/serilog");
@@ -31,7 +31,10 @@ namespace JustCLI.BuiltInCommands
             Log.Information("[{ContactHeader}]", "SUPPORT");
             Log.Information("[Author]: {Author}", "Sebastian Bathrick");
             Log.Information("[Email]: sebastianbathrick@gmail.com");
-
+            Log.Information("");
+            Log.Information("[{LicenseHeader}]", "LICENSE");
+            Log.Information("{License}", "Sebastian Bathrick 2025. All Rights Reserved.");
+            Log.Information("To see more information about licensing visit the Github repository provided above.");
         }
     }
 }

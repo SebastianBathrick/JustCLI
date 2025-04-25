@@ -11,3 +11,9 @@ C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\JustCLI.dll
 C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\refint\JustCLI.dll
 C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\JustCLI.pdb
 C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\ref\JustCLI.dll
+C:\Users\Sebastian\Desktop\JustCLI\bin\Debug\net8.0\JustCLI.exe
+C:\Users\Sebastian\Desktop\JustCLI\bin\Debug\net8.0\JustCLI.runtimeconfig.json
+C:\Users\Sebastian\Desktop\JustCLI\bin\Debug\net8.0\Serilog.dll
+C:\Users\Sebastian\Desktop\JustCLI\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\JustCLI.csproj.Up2Date
+C:\Users\Sebastian\Desktop\JustCLI\obj\Debug\net8.0\JustCLI.genruntimeconfig.cache

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A lightweight CLI framework.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.12.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.12-alpha+219fd1801f5ce2b9897b8e890ad6c5c90daccc6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.12-alpha+f98846bc1309978d39242dd3179a3c3b4f601095")]
 [assembly: System.Reflection.AssemblyProductAttribute("JustCLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JustCLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.12.0")]
