@@ -16,3 +16,4 @@ C:\Users\Sebastian\Desktop\CLI\obj\Debug\net8.0\refint\CLI.dll
 C:\Users\Sebastian\Desktop\CLI\obj\Debug\net8.0\CLI.pdb
 C:\Users\Sebastian\Desktop\CLI\obj\Debug\net8.0\CLI.genruntimeconfig.cache
 C:\Users\Sebastian\Desktop\CLI\obj\Debug\net8.0\ref\CLI.dll
+C:\Users\Sebastian\Desktop\CLI\obj\Debug\net8.0\CLI.sourcelink.json

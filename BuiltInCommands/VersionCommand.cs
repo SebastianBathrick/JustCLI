@@ -1,8 +1,8 @@
 ﻿using Serilog;
 
-namespace SebastianBathrick.JustCLI.BuiltInCommands
+namespace JustCLI.BuiltInCommands
 {
-    public class VersionCommand : ICommand
+    internal class VersionCommand : ICommand
     {
         private const string PLACEHOLDER_VERSION = "Unknown version";
 
@@ -14,18 +14,9 @@ namespace SebastianBathrick.JustCLI.BuiltInCommands
 
         public void SetVersion(string version) => _version = version;
 
-        public bool Execute(List<(Flag flag, string? value)> usedFlagsAndValues)
+        public void Execute(FlagEntries? flagEntries)
         {
-            try
-            {
-                Log.Logger.Information("Version: {Version}", _version);
-                return true;
-            }
-            catch (Exception e)
-            {
-                Log.Error(e, "An error occurred while executing the version command.");
-                return false;
-            }
+            Log.Logger.Information("Version: {Version}", _version);
         }
     }
 }

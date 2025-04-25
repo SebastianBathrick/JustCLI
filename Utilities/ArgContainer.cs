@@ -1,6 +1,6 @@
-﻿namespace SebastianBathrick.JustCLI.Utilities
+﻿namespace JustCLI.Utilities
 {
-    public class ArgContainer
+    internal class ArgContainer
     {
         private string[] _args;
         private int _currIndex;

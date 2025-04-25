@@ -1,17 +1,19 @@
-﻿using SebastianBathrick.JustCLI.Utilities;
+﻿using JustCLI.Utilities;
 using Serilog;
 
-namespace SebastianBathrick.JustCLI.BuiltInCommands
+namespace JustCLI.BuiltInCommands
 {
-    public class HelpCommand : ICommand
+    internal class HelpCommand : ICommand
     {
         #region Constants & Variables
-        public const string SCREEN_TITLE = "[CLI HELP]";
-        public const string FLAGS_TITLE = "[ASSOCIATED FLAGS]";
-        public const string COMMAND_TITLE = "[COMMAND]";
+        private const string SCREEN_TITLE = "[CLI HELP]";
+        private const string FLAGS_TITLE = "[ASSOCIATED FLAGS]";
+        private const string COMMAND_TITLE = "[COMMAND]";
+
+        private const string DETAILED_FLAG = "detailed";    
 
         private Flag[] _flags = [
-            new Flag("detailed", "Provides detailed command and flag descriptions.", false)
+            new Flag(DETAILED_FLAG, "Provides detailed command and flag descriptions.", false)
         ];
 
         private List<ICommand> _validCommands = new List<ICommand>();
@@ -26,48 +28,43 @@ namespace SebastianBathrick.JustCLI.BuiltInCommands
         #endregion
 
         /// <summary> 
-        /// Adds a valid command to list when executed. Needs to be called in CommandLineEnviro's constructor. 
+        /// Adds a valid command to list when executed. Needs to be called in CommandLineApp's constructor. 
         /// </summary>
-        public void AddCommand(ICommand command) =>
-            _validCommands.Add(command);
+        public void AddCommand(ICommand command)
+        {
+            if(!_validCommands.Contains(command))
+                _validCommands.Add(command);
+        }
+            
 
         /// <summary> 
         /// Displays a list of valid commands, and optionally their flags, using Serialog instance.
         /// </summary>
-        public bool Execute(List<(Flag flag, string? value)> usedFlagsAndValues)
+        public void Execute(FlagEntries? flagEntries)
         {
-            try
+            Log.Information("{Help}: The following is a list of valid commands:", SCREEN_TITLE);
+            bool isDetailed = flagEntries.IsFlag(DETAILED_FLAG);
+
+            foreach (var command in _validCommands)
             {
-                Log.Information("{Help}: The following is a list of valid commands:", SCREEN_TITLE);
-                bool isDetailed = CommandUtilities.IsFlagUsed(_flags[0].name, usedFlagsAndValues);
-
-                foreach (var command in _validCommands)
+                if (isDetailed)
                 {
-                    if (isDetailed)
-                    {
-                        Log.Information("");
-                        Log.Information("{CommandTitle}", COMMAND_TITLE);
-                    }
-
-                    Log.Information("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
-
-                    if (isDetailed && command.Flags.Count() > 0)
-                    {
-                        Log.Information("");
-                        Log.Information("{FlagsTitle}", FLAGS_TITLE);
-                        foreach (var flag in command.Flags)
-                            Log.Information("\t" + flag.ToString(), flag.name);
-                    }
+                    Log.Information("");
+                    Log.Information("{CommandTitle}", COMMAND_TITLE);
                 }
 
-                Log.Information("");
-                return true;
+                Log.Information("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
+
+                if (isDetailed && command.Flags.Count() > 0)
+                {
+                    Log.Information("");
+                    Log.Information("{FlagsTitle}", FLAGS_TITLE);
+                    foreach (var flag in command.Flags)
+                        Log.Information("\t" + flag.ToString(), flag.name);
+                }
             }
-            catch (Exception e)
-            {
-                Log.Error(e, "An error occurred while executing the help command.");
-                return false;
-            }
+
+            Log.Information("");
         }
     }
 }

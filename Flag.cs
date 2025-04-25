@@ -1,4 +1,4 @@
-﻿namespace SebastianBathrick.JustCLI
+﻿namespace JustCLI
 {
     public struct Flag
     {
