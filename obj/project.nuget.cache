@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wrj7DXpFdz8=",
+  "dgSpecHash": "NpyncCgMMAU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastian\\Desktop\\CLI\\CLI.csproj",
+  "projectFilePath": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastian\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\serilog.sinks.console\\6.0.0\\serilog.sinks.console.6.0.0.nupkg.sha512"

@@ -19,7 +19,7 @@
         /// <exception cref="InvalidOperationException">Throws if the container is empty.</exception>
         public string PeekFlagName()
         {
-            if(IsEmpty)
+            if (IsEmpty)
                 throw new InvalidOperationException("No flags found in the container.");
             return _flags[0].name;
         }
@@ -43,7 +43,7 @@
                     value = GetValueAtIndex(i);
                     return value != string.Empty;
                 }
-        
+
             return false;
         }
 
@@ -68,7 +68,7 @@
             _values.RemoveAt(index);
             return value;
         }
-    
+
         private string VerifyFlagNamePrefix(string flagName)
         {
             if (flagName.StartsWith(Flag.PREFIX))

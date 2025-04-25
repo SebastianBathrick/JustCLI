@@ -1,5 +1,4 @@
-﻿using JustCLI.Utilities;
-using Serilog;
+﻿using Serilog;
 
 namespace JustCLI.BuiltInCommands
 {
@@ -20,7 +19,7 @@ namespace JustCLI.BuiltInCommands
         ];
 
         private List<ICommand> _validCommands = new List<ICommand>();
-        
+
         public string Name => "help";
 
         public string Description => "Displays help information for commands.";
@@ -32,10 +31,10 @@ namespace JustCLI.BuiltInCommands
         /// </summary>
         public void AddCommand(ICommand command)
         {
-            if(!_validCommands.Contains(command))
+            if (!_validCommands.Contains(command))
                 _validCommands.Add(command);
         }
-            
+
 
         /// <summary> 
         /// Displays a list of valid commands, and optionally their flags, using Serialog instance.

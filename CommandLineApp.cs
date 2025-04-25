@@ -34,7 +34,7 @@ namespace JustCLI
 
             // Add built-in commands
             AddCommands([
-                _helpCommand = new HelpCommand(), 
+                _helpCommand = new HelpCommand(),
                 _versionCommand = new VersionCommand(),
                 _cliVersionCommand = new CLIVersionCommand(),
                 new ClearTerminalCommand()
@@ -54,7 +54,7 @@ namespace JustCLI
         /// before exiting.</param>
         /// <param name="argOverride">If not null overrides initial args provided to the program.</param>
         public static void Start(
-            bool requireCommand = false, 
+            bool requireCommand = false,
             bool isPromptBeforeExit = false,
             string[]? argOverride = null
             )
@@ -123,7 +123,7 @@ namespace JustCLI
                     _argContainer = new ArgContainer(newArgs);
                 }
 
-                if(_argContainer.IsEmpty)
+                if (_argContainer.IsEmpty)
                 {
                     if (_defaultCommand != null)
                         _defaultCommand.Execute(null);
@@ -136,7 +136,7 @@ namespace JustCLI
                         if (requireCommand)
                             return;
                     }
-                }                 
+                }
                 else
                     // Otherwise, parse and execute the provided commands
                     ParseCommands();
@@ -145,9 +145,9 @@ namespace JustCLI
                 isFirstPass = false;
             }
             while (
-            isPromptBeforeExit && 
+            isPromptBeforeExit &&
             CLIHelpers.YesNoPrompt("Do you want to enter more arguments?",
-            isDefault:true, defaultTo:false) // Default to no if field left blank.
+            isDefault: true, defaultTo: false) // Default to no if field left blank.
             );
         }
 
@@ -163,7 +163,7 @@ namespace JustCLI
                     Log.Error("Expected command starting with {Prefix} but got {Arg}.", ICommand.PREFIX, arg);
                     LogHelpDirections();
                     return;
-                }                 
+                }
                 else if (!_commandDict.ContainsKey(arg))
                 {
 
@@ -171,7 +171,7 @@ namespace JustCLI
                     LogHelpDirections();
                     return;
                 }
-                 
+
                 var command = _commandDict[arg];
 
                 if (!TryGetCommandFlags(command, out var flagsAndVals))
@@ -211,13 +211,13 @@ namespace JustCLI
                 string? flagValue = null;
 
                 // Check if the flag needs a value to follow it, and if so, cache it
-                if(verifiedFlag.isValueRequired)
+                if (verifiedFlag.isValueRequired)
                     // Check if the next argument is a value
                     if (i + 1 < possibleFlags.Count && !possibleFlags[i + 1].StartsWith(Flag.PREFIX))
                     {
                         flagValue = possibleFlags[i + 1];
                         i++; // Skip the value in the next iteration
-                    }                        
+                    }
                     else
                     {
                         Log.Error("Flag {Flag} requires a value but none was provided.", verifiedFlag.name);

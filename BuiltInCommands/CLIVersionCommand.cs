@@ -31,7 +31,7 @@ namespace JustCLI.BuiltInCommands
             Log.Information("[{ContactHeader}]", "SUPPORT");
             Log.Information("[Author]: {Author}", "Sebastian Bathrick");
             Log.Information("[Email]: sebastianbathrick@gmail.com");
-            
+
         }
     }
 }

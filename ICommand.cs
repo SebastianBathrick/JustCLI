@@ -30,7 +30,7 @@
             return false;
         }
 
-        public bool HasNoRequiredFlags() => 
+        public bool HasNoRequiredFlags() =>
             Flags.Count() == 0 || GetRequiredFlags().Count() == 0;
 
         /// <summary> Returns a list containing all required flags for this command. </summary>

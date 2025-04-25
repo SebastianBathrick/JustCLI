@@ -12,8 +12,8 @@ namespace JustCLI.Utilities
         /// <param name="allowEmpty">If true, an empty file will not print a message and return false.</param>
         /// <returns>Returns true if a file is found and meets the requirements specified.</returns>
         public static bool TryGetFileContents(
-            string filePath, 
-            out string[] fileLines, 
+            string filePath,
+            out string[] fileLines,
             bool allowEmpty = false
             )
         {
@@ -122,7 +122,7 @@ namespace JustCLI.Utilities
         /// <summary> Gets a filepath from the user and verifies the file exists. </summary>
         /// <param name="allowEmptyFile"> If true, a path for an empty file can be returned.</param>
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
-        public static string GetFilePathFromUser(string valueName, bool allowEmptyFile=false)
+        public static string GetFilePathFromUser(string valueName, bool allowEmptyFile = false)
         {
             Log.Information("Please enter a value for {ValueName} (file path):", valueName);
             while (true)
@@ -143,12 +143,12 @@ namespace JustCLI.Utilities
                         Log.Error("The file is empty: {FilePath}", input);
 
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         Log.Error(e, "An error occurred while reading the file: {FilePath}", input);
-                    }                
+                    }
                 }
-                    
+
                 Log.Error("Invalid input. Please enter a valid file path:");
             }
         }
@@ -157,8 +157,8 @@ namespace JustCLI.Utilities
         #region Prompts
         /// <summary> Prompts the user for a yes or no response. </summary>
         public static bool YesNoPrompt(
-            string promptMessage, 
-            bool isDefault = false, 
+            string promptMessage,
+            bool isDefault = false,
             bool defaultTo = false
             )
         {
@@ -167,7 +167,7 @@ namespace JustCLI.Utilities
             {
                 string? input = Console.ReadLine();
 
-                if(string.IsNullOrEmpty(input))
+                if (string.IsNullOrEmpty(input))
                 {
                     if (isDefault)
                         return defaultTo;
