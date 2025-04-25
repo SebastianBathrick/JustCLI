@@ -1,6 +1,6 @@
 # JustCLI
 
-JustCLI is a lightweight .NET command-line interface library designed to simplify the creation of command-line applications with minimal setup.
+JustCLI is a lightweight .NET 8 command-line interface library designed to simplify the creation of command-line applications with minimal setup.
 
 ## Installation
 
@@ -204,4 +204,8 @@ string filePath = CLIHelpers.GetFilePathFromUser("file");
 
 ## License
 
-[MIT License](LICENSE)
+Copyright © Sebastian Bathrick 2025. All Rights Reserved.
+
+This software is proprietary and confidential.
+Unauthorized use, modification, or distribution is strictly prohibited.
+For licensing inquiries, please contact sebastianbathrick@gmail.com.
