@@ -94,7 +94,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.0.1-alpha",
+    "version": "0.0.12-alpha",
     "restore": {
       "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
       "projectName": "JustCLInterface",
@@ -115,7 +115,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/packages/JustCLInterface/": {}
       },
       "frameworks": {
         "net8.0": {

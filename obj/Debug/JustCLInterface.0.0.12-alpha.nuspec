@@ -2,12 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>JustCLInterface</id>
-    <version>0.0.1-alpha</version>
+    <version>0.0.12-alpha</version>
     <title>JustCLI</title>
     <authors>Sebastian Bathrick</authors>
-    <projectUrl>https://github.com/SebastianBathrick/JustCLI/</projectUrl>
     <description>A lightweight CLI framework.</description>
-    <repository type="git" commit="219fd1801f5ce2b9897b8e890ad6c5c90daccc6e" />
+    <repository type="git" url="https://github.com/SebastianBathrick/JustCLI/" commit="219fd1801f5ce2b9897b8e890ad6c5c90daccc6e" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Serilog" version="4.2.0" exclude="Build,Analyzers" />
