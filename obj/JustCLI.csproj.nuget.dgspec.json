@@ -5,10 +5,10 @@
   },
   "projects": {
     "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj": {
-      "version": "1.0.0",
+      "version": "0.0.1-alpha",
       "restore": {
         "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
-        "projectName": "JustCLI",
+        "projectName": "JustCLInterface",
         "projectPath": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\JustCLI.csproj",
         "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Sebastian\\Desktop\\JustCLI\\obj\\",

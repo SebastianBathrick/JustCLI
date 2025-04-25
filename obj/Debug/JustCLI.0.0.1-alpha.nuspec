@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>JustCLI</id>
+    <version>0.0.1-alpha</version>
+    <title>JustCLI</title>
+    <authors>Sebastian Bathrick</authors>
+    <projectUrl>https://github.com/SebastianBathrick/JustCLI/</projectUrl>
+    <description>A lightweight CLI framework.</description>
+    <repository type="git" commit="2cb1c98cf80f27bc6804aebd59306d38b8bbe588" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Serilog" version="4.2.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Console" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Sebastian\Desktop\JustCLI\bin\Debug\net8.0\JustCLI.dll" target="lib\net8.0\JustCLI.dll" />
+  </files>
+</package>
