@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>JustCLInterface</id>
-    <version>0.0.1-alpha</version>
+    <version>0.0.11-alpha</version>
     <title>JustCLI</title>
     <authors>Sebastian Bathrick</authors>
     <projectUrl>https://github.com/SebastianBathrick/JustCLI/</projectUrl>

@@ -6,6 +6,8 @@
 
         public string Name { get; }
 
+        public string? ShortHandName => null;
+
         public string Description { get; }
 
         public Flag[] Flags { get { return []; } }

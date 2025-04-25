@@ -22,6 +22,8 @@ namespace JustCLI.BuiltInCommands
 
         public string Name => "help";
 
+        public string? ShortHandName => "h";
+
         public string Description => "Displays help information for commands.";
 
         public Flag[] Flags => _flags;
@@ -46,13 +48,19 @@ namespace JustCLI.BuiltInCommands
 
             foreach (var command in _validCommands)
             {
+                var prefixedName = ICommand.PREFIX + command.Name;
+
                 if (isDetailed)
                 {
                     Log.Information("");
                     Log.Information("{CommandTitle}", COMMAND_TITLE);
                 }
 
-                Log.Information("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
+                if (command.ShortHandName != null && isDetailed)
+                    Log.Information("\t{Name} or {Shorthand}: " + command.Description, 
+                        prefixedName, command.ShortHandName);
+                else
+                    Log.Information("\t{Name}: " + command.Description, prefixedName);
 
                 if (isDetailed && command.Flags.Count() > 0)
                 {
