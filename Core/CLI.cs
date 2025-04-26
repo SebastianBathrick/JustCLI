@@ -95,7 +95,13 @@ namespace JustCLI
         {
             foreach (var command in commands)
                 if (!IsCommandAlreadyAdded(command))
-                    _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
+                {
+                    if(command.MinFlagCount > command.Flags.Length)
+                        throw new Exception($"Command {command.Name} has more required flags than available. " +
+                            $"MinFlagCount: {command.MinFlagCount}, Flags: {command.Flags.Length}");
+                    else
+                        _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
+                }                    
         }
 
         /// <summary> 
@@ -240,6 +246,15 @@ namespace JustCLI
                     LogHelpDirections();
                     return false;
                 }
+
+            // In case there are multiple optional flags but a certain number need to be provided
+            if(command.MinFlagCount != ICommand.DEFAULT_MIN_FLAG_COUNT && command.MinFlagCount > flagEntries.Count)
+            {
+                Log.Error("Command {ICommand} requires at least {MinFlagCount} flags but got {FlagCount}.",
+                    command.Name, command.MinFlagCount, flagEntries.Count);
+                LogHelpDirections();
+                return false;
+            }
 
             // All flags and values were collected successfully
             return true;

@@ -6,6 +6,8 @@
         private List<Flag> _flags = new List<Flag>();
         private List<string?> _values = new List<string?>();
         
+        public int Count => _flags.Count;   
+
         public bool IsEmpty => _flags.Count == 0;
 
         public static FlagInputContainer Empty => new FlagInputContainer();

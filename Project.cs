@@ -1,1 +1,3 @@
-﻿
+﻿using JustCLI;
+
+CLI.Start();
