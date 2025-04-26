@@ -7,9 +7,9 @@
         public Flag[] Flags => Array.Empty<Flag>();
 
         /// <summary>
-        /// Clears the terminal screen.
+        /// Clears the terminal.
         /// </summary>
-        public void Execute(FlagEntries? flagEntries)
+        public void Execute(FlagInputContainer flagEntries)
         {
             Console.Clear();
         }

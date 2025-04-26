@@ -5,9 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>JustCLI</Title>
-    <Version>0.0.12-alpha</Version>
+    <Version>0.0.14.25-alpha</Version>
     <Authors>Sebastian Bathrick</Authors>
-    <Description>A lightweight CLI framework.</Description>
+    <Description>A lightweight CLI framework that trims the fat.</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageOutputPath>Release</PackageOutputPath>
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
@@ -15,15 +15,14 @@
     <PackageId>JustCLInterface</PackageId>
     <OutputType>Library</OutputType>
     <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
+    <BaseOutputPath>\Builds</BaseOutputPath>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Serilog" Version="4.2.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Release\" />
+    <PackageReference Include="TextCopy" Version="6.2.1" />
   </ItemGroup>
 
 </Project>

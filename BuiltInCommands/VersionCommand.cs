@@ -3,7 +3,7 @@
 namespace JustCLI.BuiltInCommands
 {
     /// <summary>
-    /// Command that displays the version of the app in use (to be set by client.)
+    /// ICommand that displays the version of the app in use (to be set by client.)
     /// </summary>
     internal class VersionCommand : ICommand
     {
@@ -17,7 +17,7 @@ namespace JustCLI.BuiltInCommands
 
         public void SetVersion(string version) => _version = version;
 
-        public void Execute(FlagEntries? flagEntries)
+        public void Execute(FlagInputContainer flagEntries)
         {
             Log.Logger.Information("Version: {Version}", _version);
         }

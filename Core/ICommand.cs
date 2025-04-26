@@ -12,7 +12,7 @@
 
         /// <summary> Defines what happens when the user enters this command into the CLI. </summary>
         /// <param name="flagEntries">The flags and values entered by the user.</param>   
-        public void Execute(FlagEntries? flagEntries);
+        public void Execute(FlagInputContainer flagEntries);
 
         /// <summary> Returns true and the flag of the given name if it exists. </summary>
         public bool TryGetFlag(string flagName, out Flag? validFlag)

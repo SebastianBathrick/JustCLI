@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Documents\\JustCLI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\commandlineapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\commandlineapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\cliversioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\cliversioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\clihelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:utilities\\clihelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\exitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\exitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\cli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\cli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\helpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,27 +35,32 @@
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\cliversioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\cliversioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\openvscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\openvscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\fileiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:utilities\\fileiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\flaginputcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\flaginputcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\versioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\versioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\commandtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\commandtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\dotnet\\sdk\\8.0.405\\Sdks\\NuGet.Build.Tasks.Pack\\build\\NuGet.Build.Tasks.Pack.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:utilities\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,36 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JustCLI",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
+              "RelativeDocumentMoniker": "JustCLI.csproj",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
+              "RelativeToolTip": "JustCLI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-26T21:48:35.864Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-25T17:12:57.025Z",
+              "DocumentIndex": 3,
+              "Title": "ExitCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ExitCommand.cs",
+              "RelativeDocumentMoniker": "BuiltInCommands\\ExitCommand.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ExitCommand.cs",
+              "RelativeToolTip": "BuiltInCommands\\ExitCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:36:58.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CLIHelpers.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\CLIHelpers.cs",
-              "RelativeDocumentMoniker": "Utilities\\CLIHelpers.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\CLIHelpers.cs",
-              "RelativeToolTip": "Utilities\\CLIHelpers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ICommand.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
+              "RelativeDocumentMoniker": "Core\\ICommand.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
+              "RelativeToolTip": "Core\\ICommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T17:05:03.982Z"
+              "WhenOpened": "2025-04-26T21:34:19.967Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -106,7 +125,98 @@
               "RelativeToolTip": "Core\\Flag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T17:03:37.306Z"
+              "WhenOpened": "2025-04-26T21:33:12.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Project.cs",
+              "RelativeDocumentMoniker": "Project.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Project.cs",
+              "RelativeToolTip": "Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:33:07.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClearTerminalCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
+              "RelativeDocumentMoniker": "BuiltInCommands\\ClearTerminalCommand.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
+              "RelativeToolTip": "BuiltInCommands\\ClearTerminalCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:33:03.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OpenVSCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\OpenVSCommand.cs",
+              "RelativeDocumentMoniker": "BuiltInCommands\\OpenVSCommand.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\OpenVSCommand.cs",
+              "RelativeToolTip": "BuiltInCommands\\OpenVSCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:23:24.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FileIOHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\FileIOHelper.cs",
+              "RelativeDocumentMoniker": "Utilities\\FileIOHelper.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\FileIOHelper.cs",
+              "RelativeToolTip": "Utilities\\FileIOHelper.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:23:12.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CLI.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CLI.cs",
+              "RelativeDocumentMoniker": "Core\\CLI.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CLI.cs",
+              "RelativeToolTip": "Core\\CLI.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwE0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:23:04.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JustCLI",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
+              "RelativeDocumentMoniker": "JustCLI.csproj",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
+              "RelativeToolTip": "JustCLI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-26T21:02:46.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CLIVersionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\CLIVersionCommand.cs",
+              "RelativeDocumentMoniker": "BuiltInCommands\\CLIVersionCommand.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\CLIVersionCommand.cs",
+              "RelativeToolTip": "BuiltInCommands\\CLIVersionCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T20:39:44.251Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,131 +226,49 @@
               "RelativeDocumentMoniker": "BuiltInCommands\\HelpCommand.cs",
               "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\HelpCommand.cs",
               "RelativeToolTip": "BuiltInCommands\\HelpCommand.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAzwCwAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwE4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T06:54:26.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CLIVersionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\CLIVersionCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\CLIVersionCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\CLIVersionCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\CLIVersionCommand.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwCUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:18:31.378Z",
+              "WhenOpened": "2025-04-26T20:39:39.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CommandLineApp.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CommandLineApp.cs",
-              "RelativeDocumentMoniker": "Core\\CommandLineApp.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CommandLineApp.cs",
-              "RelativeToolTip": "Core\\CommandLineApp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:13:35.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Project.cs",
-              "RelativeDocumentMoniker": "Project.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Project.cs",
-              "RelativeToolTip": "Project.cs",
+              "DocumentIndex": 12,
+              "Title": "FlagInputContainer.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\FlagInputContainer.cs",
+              "RelativeDocumentMoniker": "Core\\FlagInputContainer.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\FlagInputContainer.cs",
+              "RelativeToolTip": "Core\\FlagInputContainer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:07:36.142Z",
+              "WhenOpened": "2025-04-26T20:39:37.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JustCLI",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
-              "RelativeDocumentMoniker": "JustCLI.csproj",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
-              "RelativeToolTip": "JustCLI.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-25T06:43:45.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "VersionCommand.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\VersionCommand.cs",
               "RelativeDocumentMoniker": "BuiltInCommands\\VersionCommand.cs",
               "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\VersionCommand.cs",
               "RelativeToolTip": "BuiltInCommands\\VersionCommand.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:18:29.089Z"
+              "WhenOpened": "2025-04-26T20:39:35.413Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClearTerminalCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\ClearTerminalCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\ClearTerminalCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "LogHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\LogHelper.cs",
+              "RelativeDocumentMoniker": "Utilities\\LogHelper.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\LogHelper.cs",
+              "RelativeToolTip": "Utilities\\LogHelper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:18:32.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "JustCLI.csproj",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
-              "RelativeDocumentMoniker": "JustCLI.csproj",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
-              "RelativeToolTip": "JustCLI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-25T06:40:43.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
-              "RelativeDocumentMoniker": "Core\\ICommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
-              "RelativeToolTip": "Core\\ICommand.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAowC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:04:43.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CommandTemplate.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CommandTemplate.cs",
-              "RelativeDocumentMoniker": "Core\\CommandTemplate.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CommandTemplate.cs",
-              "RelativeToolTip": "Core\\CommandTemplate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:05:04.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NuGet.Build.Tasks.Pack.targets",
-              "DocumentMoniker": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.405\\Sdks\\NuGet.Build.Tasks.Pack\\build\\NuGet.Build.Tasks.Pack.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files (x86)\\dotnet\\sdk\\8.0.405\\Sdks\\NuGet.Build.Tasks.Pack\\build\\NuGet.Build.Tasks.Pack.targets",
-              "ToolTip": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.405\\Sdks\\NuGet.Build.Tasks.Pack\\build\\NuGet.Build.Tasks.Pack.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files (x86)\\dotnet\\sdk\\8.0.405\\Sdks\\NuGet.Build.Tasks.Pack\\build\\NuGet.Build.Tasks.Pack.targets",
-              "ViewState": "AgIAAA8BAAAAAAAAAAAowNwAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-25T06:54:48.507Z"
+              "WhenOpened": "2025-04-26T20:23:02.866Z",
+              "EditorCaption": ""
             }
           ]
         }

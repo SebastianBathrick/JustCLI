@@ -7,10 +7,10 @@ namespace JustCLI
     /// <summary>
     /// Singleton class that handles command line arguments and executes commands.
     /// </summary>
-    public class CommandLineApp
+    public class CLI
     {
         #region Variables
-        private static CommandLineApp _instance = new CommandLineApp();
+        private static CLI _instance = new CLI();
 
         // Built-In Commands
         private HelpCommand _helpCommand;
@@ -20,10 +20,11 @@ namespace JustCLI
         private ICommand? _defaultCommand;
         private ArgContainer _argContainer;
         private Dictionary<string, ICommand> _commandDict;
+        private bool _isExiting = false;
         #endregion
 
         #region Setup Methods
-        private CommandLineApp()
+        private CLI()
         {
             _instance = this;
 
@@ -37,7 +38,9 @@ namespace JustCLI
                 _helpCommand = new HelpCommand(),
                 _versionCommand = new VersionCommand(),
                 _cliVersionCommand = new CLIVersionCommand(),
-                new ClearTerminalCommand()
+                new ClearTerminalCommand(),
+                new OpenVSCommand(),
+                new ExitCommand(),
                 ]);
 
             // Instantiate Serilog logger
@@ -60,11 +63,18 @@ namespace JustCLI
             )
         {
             // Start just serves as a wrapper and StartInstance does as described by the docs
-            _instance.StartInstance(
-                requireCommand: requireCommand,
-                isPromptBeforeExit: isPromptBeforeExit,
-                argOverride: argOverride
-                );
+            _instance.StartInstance(requireCommand: requireCommand,argOverride: argOverride);
+        }
+
+        /// <summary> Removes all client commands (including the default.) </summary>
+        public static void ClearCommands() =>
+            _instance = new CLI();
+
+        public static void SetExiting(bool isExiting=true)
+        {
+            _instance._isExiting = isExiting;
+            if (isExiting)
+                Log.Information("Exiting CLI.");             
         }
 
         /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
@@ -72,7 +82,7 @@ namespace JustCLI
         {
             if (!command.HasNoRequiredFlags())
             {
-                Log.Error("Default command {Command} cannot have required flags.", command.Name);
+                Log.Error("Default command {ICommand} cannot have required flags.", command.Name);
                 return;
             }
 
@@ -96,11 +106,7 @@ namespace JustCLI
         #endregion
 
         #region Command Parsing & Execution
-        private void StartInstance(
-            bool requireCommand = false,
-            bool isPromptBeforeExit = false,
-            string[]? argOverride = null
-            )
+        private void StartInstance(bool requireCommand = false, string[]? argOverride = null)
         {
             // Add the client's and the built-in commands to the help command list.
             PopulateHelpList();
@@ -118,7 +124,7 @@ namespace JustCLI
                 if (!isFirstPass)
                 {
                     // Get the arguments through a prompt asking for the user to enter a string
-                    var newArgs = CLIHelpers.GetStringFromUser("additional arguments").
+                    var newArgs = PrimitiveIOHelper.GetStringFromUser("additional arguments").
                         Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
                     _argContainer = new ArgContainer(newArgs);
                 }
@@ -126,7 +132,7 @@ namespace JustCLI
                 if (_argContainer.IsEmpty)
                 {
                     if (_defaultCommand != null)
-                        _defaultCommand.Execute(null);
+                        _defaultCommand.Execute(FlagInputContainer.Empty);
                     else
                     {
                         Log.Error("No arguments were provided.");
@@ -144,11 +150,9 @@ namespace JustCLI
                 // Enables the next pass to request args as input from user
                 isFirstPass = false;
             }
-            while (
-            isPromptBeforeExit &&
-            CLIHelpers.YesNoPrompt("Do you want to enter more arguments?",
-            isDefault: true, defaultTo: false) // Default to no if field left blank.
-            );
+            while (!_isExiting);
+
+            _isExiting = false; // Reset in case call is made again.
         }
 
         /// <summary> Parses each argument and executes commands in the order the user provided. </summary>
@@ -167,7 +171,7 @@ namespace JustCLI
                 else if (!_commandDict.ContainsKey(arg))
                 {
 
-                    Log.Error("Command {Command} is not a valid command.", arg);
+                    Log.Error("ICommand {ICommand} is not a valid command.", arg);
                     LogHelpDirections();
                     return;
                 }
@@ -183,7 +187,7 @@ namespace JustCLI
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e, "An error occurred while executing the command {Command}.", command.Name);
+                    Log.Error(e, "An error occurred while executing the command {ICommand}.", command.Name);
                 }
             }
             while (!_argContainer.IsEmpty);
@@ -193,13 +197,13 @@ namespace JustCLI
         #region Flag Methods
         /// <summary> Gets any userFlagsAndValues trailing the current command and before the next command. </summary>
         /// <returns> Returns true if all flags and values (or lack-thereof) have been collected successfully. </returns>
-        private bool TryGetCommandFlags(ICommand command, out FlagEntries flagEntries)
+        private bool TryGetCommandFlags(ICommand command, out FlagInputContainer flagEntries)
         {
             var possibleFlags = GetPossibleFlags();
             var validFlags = command.Flags;
 
             // Flags found + any values associated (if there are any of either)
-            flagEntries = new FlagEntries();
+            flagEntries = new FlagInputContainer();
 
             for (int i = 0; i < possibleFlags.Count; i++)
             {
@@ -269,7 +273,7 @@ namespace JustCLI
 
             if (!command.TryGetFlag(postCommandArg, out var validFlag))
             {
-                Log.Error("Flag {Flag} is not a valid for {Command}.", postCommandArg, command.Name);
+                Log.Error("Flag {Flag} is not a valid for {ICommand}.", postCommandArg, command.Name);
                 LogHelpDirections();
                 return false;
             }

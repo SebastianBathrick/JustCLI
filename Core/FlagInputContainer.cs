@@ -1,12 +1,14 @@
 ﻿namespace JustCLI
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
-    public class FlagEntries
+    public class FlagInputContainer
     {
         private List<Flag> _flags = new List<Flag>();
         private List<string?> _values = new List<string?>();
-
+        
         public bool IsEmpty => _flags.Count == 0;
+
+        public static FlagInputContainer Empty => new FlagInputContainer();
 
         /// <summary> Add a flag and value/null provided by user arguments. </summary>
         public void AddFlag(Flag flag, string? value = null)
