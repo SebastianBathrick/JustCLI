@@ -5,18 +5,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>JustCLI</Title>
-    <Version>0.0.14.35-alpha</Version>
+    <Version>0.0.14.4-alpha</Version>
     <Authors>Sebastian Bathrick</Authors>
     <Description>A lightweight CLI framework that trims the fat.</Description>
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageOutputPath>Release</PackageOutputPath>
+	<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
+	<PackageOutputPath>Release\</PackageOutputPath>
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
     <PackageId>JustCLInterface</PackageId>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
-    <BaseOutputPath>\Builds</BaseOutputPath>
-    <RepositoryType>git</RepositoryType>
+    <BaseOutputPath>Builds\</BaseOutputPath>
+    
   </PropertyGroup>
 
   <ItemGroup>

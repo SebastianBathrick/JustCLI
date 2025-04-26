@@ -1,4 +1,6 @@
-﻿namespace JustCLI
+﻿using Serilog;
+
+namespace JustCLI
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
     public class FlagInputContainer
@@ -29,11 +31,11 @@
         }
 
         /// <summary> 
-        /// Returns true a flag of the given name is found in the container and false otherwise. 
+        /// Attempts to remove flag at the front of the structure and return its value.
         /// </summary>
         /// <param name="flagName">The name of the flag to search for.</param>
         /// <param name="value">The value associated with the flag, if found.</param>
-        public bool TryGetFlagValue(string flagName, out string? value)
+        public bool TryGetValue(string flagName, out string? value)
         {
             value = null;
             flagName = VerifyFlagNamePrefix(flagName);
@@ -67,9 +69,7 @@
         #region Helper Methods
         private string? GetValueAtIndex(int index)
         {
-            _flags.RemoveAt(index);
             string? value = _values[index];
-            _values.RemoveAt(index);
             return value;
         }
 
