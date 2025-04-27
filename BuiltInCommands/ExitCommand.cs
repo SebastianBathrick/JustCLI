@@ -1,4 +1,6 @@
-﻿namespace JustCLI.BuiltInCommands
+﻿using JustCLI.Utilities;
+
+namespace JustCLI.BuiltInCommands
 {
     internal class ExitCommand : ICommand
     {

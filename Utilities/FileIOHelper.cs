@@ -116,7 +116,7 @@ namespace JustCLI.Utilities
         {
             do
             {
-                // Get user input (already validated)
+                // GetValue user input (already validated)
                 var enteredFilePath = GetFilePathFromUser(
                     extension, doesRequireFile: false, allowEmptyFile: true);
 

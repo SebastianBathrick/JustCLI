@@ -28,7 +28,7 @@ namespace JustCLI
         {
             _instance = this;
 
-            // Get the user's arguments from the command line (excluding the program name)
+            // GetValue the user's arguments from the command line (excluding the program name)
             _argContainer = new ArgContainer(Environment.GetCommandLineArgs());
             _argContainer.Get(); // Skip the first argument (the program path)
             _commandDict = new Dictionary<string, ICommand>();
@@ -129,7 +129,7 @@ namespace JustCLI
                 // If the user chose to enter more arguments after the initial iteration
                 if (!isFirstPass)
                 {
-                    // Get the arguments through a prompt asking for the user to enter a string
+                    // GetValue the arguments through a prompt asking for the user to enter a string
                     var newArgs = PrimitiveIOHelper.GetStringFromUser("additional arguments").
                         Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
                     _argContainer = new ArgContainer(newArgs);

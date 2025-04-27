@@ -1,4 +1,5 @@
-﻿using Serilog;
+﻿using JustCLI.Utilities;
+using Serilog;
 
 namespace JustCLI.BuiltInCommands
 {

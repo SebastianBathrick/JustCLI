@@ -1,4 +1,6 @@
-﻿namespace JustCLI
+﻿using JustCLI.Utilities;
+
+namespace JustCLI
 {
     public interface ICommand
     {

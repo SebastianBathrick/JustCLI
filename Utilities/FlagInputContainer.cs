@@ -1,14 +1,14 @@
 ﻿using Serilog;
 
-namespace JustCLI
+namespace JustCLI.Utilities
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
     public class FlagInputContainer
     {
         private List<Flag> _flags = new List<Flag>();
         private List<string?> _values = new List<string?>();
-        
-        public int Count => _flags.Count;   
+
+        public int Count => _flags.Count;
 
         public bool IsEmpty => _flags.Count == 0;
 
