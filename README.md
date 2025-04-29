@@ -1,17 +1,17 @@
 # JustCLI
 
-JustCLI is a lightweight .NET 8 command-line interface library designed to simplify the creation of command-line applications with minimal setup.
+JustCLI is a lightweight .NET 8 command-line interface framework designed to simplify the creation of command-line applications with minimal setup while maintaining flexibility.
 
 ## Installation
 
 ### .NET CLI
 ```bash
-dotnet add package JustCLInterface --version 0.0.1-alpha
+dotnet add package JustCLInterface --version 0.0.16-alpha
 ```
 
 ### Package Manager
 ```powershell
-NuGet\Install-Package JustCLInterface -Version 0.0.1-alpha
+NuGet\Install-Package JustCLInterface -Version 0.0.16-alpha
 ```
 
 ## Quick Start
@@ -20,91 +20,96 @@ Here's a simple example to get you started:
 
 ```csharp
 using JustCLI;
+using Serilog;
 
-// Add commands
-CommandLineApp.AddCommands(
-    [
-        new CommandTemplate(
-            "hello",
-            "Prints hello world.",
-            null,
-            (flagEntries) =>
-            {
-                Console.WriteLine("Hello, world!");
-            }
-        ),
-        new CommandTemplate(
-            "goodbye",
-            "Prints goodbye world.",
-            null,
-            (flagEntries) =>
-            {
-                Console.WriteLine("Goodbye, world!");
-            }
-        )
-    ]
-);
+// Setup logging
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .CreateLogger();
 
-// Start the app
-CommandLineApp.Start(isPromptBeforeExit: true);
+// Add commands using the ActionCommand class
+CLI.AddCommands([
+    new ActionCommand(
+        "hello",
+        "Prints hello world.",
+        (flagEntries) => {
+            Log.Information("Hello, world!");
+        }
+    ),
+    new ActionCommand(
+        "greet",
+        "Greets a user by name.",
+        (flagEntries) => {
+            if (flagEntries.TryGetValue("name", out string? name))
+                Log.Information("Hello, {Name}!", name);
+            else
+                Log.Information("Hello, anonymous user!");
+        },
+        [new Flag("name", "The name to greet", false, true)]
+    )
+]);
+
+// Set the application version
+CLI.SetVersion("1.0.0");
+
+// Start the CLI
+CLI.Start(allowMoreCommands: true);
 ```
 
-## Features
+## Core Concepts
 
-- Simple command and flag system
-- Built-in help command
-- Easy command template creation
-- Support for required and optional flags
-- Flag values support
-- Built-in validation for commands and flags
+### Commands and Flags
 
-## Basic Concepts
+In JustCLI, the command-line interface follows these conventions:
 
-### Commands
+- **Commands** start with `--` (e.g., `--help`, `--version`)
+- **Flags** start with `-` (e.g., `-name`, `-v`)
+- **Flag Values** follow directly after flags that require them (e.g., `-name John`)
 
-Commands start with `--` and are the primary entry point for your CLI functions:
-
+Example of a command with flags:
 ```
---command
-```
-
-### Flags
-
-Flags start with `-` and can be added to commands to modify their behavior:
-
-```
---command -flag
-```
-
-### Flag Values
-
-When a flag requires a value, the value must be:
-- The argument directly after the flag
-- Only one value per flag is allowed
-- The value cannot start with `-` or `--` (cannot be another flag or command)
-
-Example:
-```
---command -flag value
+--command -flag1 -flag2 value2 -flag3
 ```
 
 ### Creating Commands
 
-You can create commands in two ways:
+JustCLI offers two ways to create commands:
 
-1. Using the `CommandTemplate` class (simplest approach):
+#### 1. Using the ActionCommand class (recommended for simple commands)
+
 ```csharp
-new CommandTemplate(
+new ActionCommand(
     "command-name",
     "Description of the command",
-    [new Flag("flag-name", "Description of the flag")],
     (flagEntries) => {
         // Command execution logic here
-    }
-);
+    },
+    [new Flag("flag-name", "Description of the flag")], // Optional flags array
+    minFlagCount: 0 // Optional minimum flag count
+)
 ```
 
-2. By implementing the `ICommand` interface for more complex cases.
+#### 2. Implementing the ICommand interface (for more complex commands)
+
+```csharp
+public class CustomCommand : ICommand
+{
+    public string Name => "custom";
+    public string Description => "A custom command implementation";
+    public int MinFlagCount => 0; // Override if needed
+    
+    public Flag[] Flags => [
+        new Flag("flag1", "Description of flag1"),
+        new Flag("flag2", "Description of flag2", false, true)
+    ];
+    
+    public void Execute(FlagInputContainer flagEntries)
+    {
+        // Command execution logic
+    }
+}
+```
 
 ### Working with Flags
 
@@ -114,98 +119,155 @@ Create flags to add parameters to your commands:
 new Flag(
     "name",             // Flag name (will be automatically prefixed with -)
     "Description",      // Description for help command
-    isRequired: true,   // Whether the flag is required
-    isValueRequired: true  // Whether the flag requires a value
+    isRequired: true,   // Whether the flag is required (default: true)
+    isValueRequired: false  // Whether the flag requires a value (default: false)
 )
 ```
 
-When `isValueRequired` is set to `true`, the library will automatically look for a value after the flag and throw an error if one is not provided or if the value starts with `-` (which would indicate another flag).
-
 ### Reading Flag Values
 
-When your command executes, it receives a `FlagEntries` object:
+When your command executes, it receives a `FlagInputContainer` object:
 
 ```csharp
 (flagEntries) => {
-    // Get a flag value
-    if (flagEntries.TryGetFlagValue("flag-name", out string value))
-    {
-        Console.WriteLine($"Flag value: {value}");
-    }
-    
     // Check if a flag exists
     if (flagEntries.IsFlag("flag-name"))
     {
-        Console.WriteLine("Flag exists");
+        Log.Information("Flag exists");
+    }
+    
+    // Get a flag value
+    if (flagEntries.TryGetValue("flag-name", out string? value))
+    {
+        Log.Information("Flag value: {Value}", value);
     }
 }
 ```
-
-## Command Line Format
-
-The general format for commands and flags is:
-
-```
---command -flag1 -flag2 value2 -flag3
-```
-
-Where:
-- `--command` is the command name
-- `-flag1` is a flag with no value
-- `-flag2 value2` is a flag with a value
-- `-flag3` is another flag with no value
 
 ## Built-in Commands
 
 JustCLI comes with several built-in commands:
 
 - `--help`: Displays help information
-  - `-detailed`: Shows detailed flag information
-- `--version`: Shows your application version (set via `CommandLineApp.SetVersion()`)
-- `--cli_version`: Shows JustCLI version information
+  - `-v`: Shows detailed flag information (verbose mode)
+- `--version`: Shows your application version (set via `CLI.SetVersion()`)
 - `--clear`: Clears the terminal
+- `--exit`: Exits the application
 
-## Configuration
+## Configuration Options
 
 ```csharp
 // Set application version
-CommandLineApp.SetVersion("1.0.0");
+CLI.SetVersion("1.0.0");
 
-// Set default command (executes when no command is provided)
-CommandLineApp.AddDefaultCommand(new CommandTemplate(
+// Add a default command (executes when no command is provided)
+CLI.AddDefaultCommand(new ActionCommand(
     "default",
     "Default command",
-    null,
     (flagEntries) => {
-        Console.WriteLine("Default command executed");
+        Log.Information("Default command executed");
     }
 ));
 
-// Start with options
-CommandLineApp.Start(
-    requireCommand: true,  // Error if no command is provided
-    isPromptBeforeExit: true  // Ask if the user wants to enter more commands
+// Define a custom logger (optional)
+var customLogger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .CreateLogger();
+CLI.DefineLogger(customLogger);
+
+// Start the CLI with options
+CLI.Start(
+    requireCommand: true,       // Error if no command is provided
+    allowMoreCommands: true,    // Allow the user to enter more commands after execution
+    argOverride: null,          // Override command-line arguments (optional)
+    useBuiltInCommands: true    // Include built-in commands (help, version, clear, exit)
 );
 ```
 
-## Helper Utilities
+## Utility Helpers
 
-JustCLI provides several helper utilities for getting user input:
+JustCLI provides several utility helper classes to simplify common operations:
 
+### PrimitiveIOHelper
 ```csharp
-using JustCLI.Utilities;
+// Get primitive values from user
+string input = PrimitiveIOHelper.GetStringFromUser("input name");
+int number = PrimitiveIOHelper.GetIntFromUser("number");
+float decimal = PrimitiveIOHelper.GetFloatFromUser("decimal");
+bool flag = PrimitiveIOHelper.GetBoolFromUser("boolean");
+```
 
-// Get user input
-string userInput = CLIHelpers.GetStringFromUser("input name");
-int number = CLIHelpers.GetIntFromUser("number");
-bool answer = CLIHelpers.YesNoPrompt("Continue?");
-string filePath = CLIHelpers.GetFilePathFromUser("file");
+### PromptHelper
+```csharp
+// Present options to user
+string[] options = ["Option 1", "Option 2", "Option 3"];
+int selection = PromptHelper.PickOption(options, "Select an option:");
+
+// Yes/No prompt
+bool answer = PromptHelper.YesNoPrompt("Continue?", 
+    isDefault: true, 
+    defaultTo: false,
+    onYes: () => Log.Information("User said yes"),
+    onNo: () => Log.Information("User said no")
+);
+```
+
+### FileIOHelper
+```csharp
+// Get file paths from user
+string filePath = FileIOHelper.GetFilePathFromUser("config file");
+string directory = FileIOHelper.GetDirectoryFromUser("output directory");
+
+// Try to read file contents
+if (FileIOHelper.TryGetFileContents(filePath, out string[] lines))
+{
+    foreach (var line in lines)
+        Log.Information(line);
+}
+
+// Create a new file
+string newFilePath = FileIOHelper.CreateFile(".txt", "File contents here");
+
+// Open an application
+FileIOHelper.OpenApplication("notepad.exe", filePath);
+```
+
+### LogHelper
+```csharp
+// Format log output
+LogHelper.PrintHeader("PROCESS STARTED");
+LogHelper.LogLineVisual();
+LogHelper.LogExtraLine(2);
+```
+
+## Advanced Usage
+
+### Removing Commands
+```csharp
+// Remove a specific command
+CLI.RemoveCommand("command-name");
+
+// Clear all commands
+CLI.ClearCommands(excludeBuiltIns: true);
+```
+
+### Exiting Programmatically
+```csharp
+// Set the exit flag to terminate the CLI loop
+CLI.SetExiting(true);
 ```
 
 ## License
 
-Copyright © Sebastian Bathrick 2025. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-This software is proprietary and confidential.
-Unauthorized use, modification, or distribution is strictly prohibited.
-For licensing inquiries, please contact sebastianbathrick@gmail.com.
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
