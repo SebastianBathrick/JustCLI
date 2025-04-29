@@ -122,8 +122,7 @@
               "RelativeToolTip": "Helpers\\PromptHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:37.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:40:37.319Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "Utilities\\ArgContainer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T05:10:03.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T05:10:03.09Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "JustCLI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-29T07:04:59.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:04:59.926Z"
             },
             {
               "$type": "Document",
@@ -173,8 +170,7 @@
               "RelativeToolTip": "Helpers\\PrimitiveIOHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:32.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:40:32.91Z"
             },
             {
               "$type": "Document",
@@ -186,8 +182,7 @@
               "RelativeToolTip": "Helpers\\LogHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:52.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:59:52.848Z"
             },
             {
               "$type": "Document",
@@ -199,8 +194,7 @@
               "RelativeToolTip": "Utilities\\FlagInputContainer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:42.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:59:42.86Z"
             },
             {
               "$type": "Document",
@@ -212,8 +206,7 @@
               "RelativeToolTip": "Core\\ActionCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:51:48.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:51:48.286Z"
             },
             {
               "$type": "Document",
@@ -225,8 +218,7 @@
               "RelativeToolTip": "BuiltInCommands\\ClearTerminalCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:19.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:57:19.614Z"
             },
             {
               "$type": "Document",
@@ -238,8 +230,7 @@
               "RelativeToolTip": "BuiltInCommands\\HelpCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:35.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:48:35.865Z"
             },
             {
               "$type": "Document",
@@ -251,8 +242,7 @@
               "RelativeToolTip": "BuiltInCommands\\VersionCommand.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:51:34.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:51:34.883Z"
             },
             {
               "$type": "Document",
@@ -264,8 +254,7 @@
               "RelativeToolTip": "Logging\\Log.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:29:06.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T11:29:06.177Z"
             },
             {
               "$type": "Document",
@@ -277,8 +266,7 @@
               "RelativeToolTip": "Project.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:52:17.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:52:17.404Z"
             },
             {
               "$type": "Document",
@@ -290,8 +278,7 @@
               "RelativeToolTip": "BuiltInCommands\\ExitCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:32.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:48:32.35Z"
             },
             {
               "$type": "Document",
@@ -303,8 +290,7 @@
               "RelativeToolTip": "Core\\Flag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:31.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:57:31.982Z"
             },
             {
               "$type": "Document",
@@ -316,8 +302,7 @@
               "RelativeToolTip": "Helpers\\FileIOHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:55.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:57:55.676Z"
             },
             {
               "$type": "Document",
@@ -329,8 +314,7 @@
               "RelativeToolTip": "Core\\CLI.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAuwFgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:20.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:48:20.406Z"
             },
             {
               "$type": "Document",
@@ -342,8 +326,7 @@
               "RelativeToolTip": "Core\\ICommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:50:44.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:50:44.923Z"
             },
             {
               "$type": "Document",
@@ -355,8 +338,7 @@
               "RelativeToolTip": "Logging\\TerminalLogger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:12:41.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T11:12:41.136Z"
             },
             {
               "$type": "Document",
@@ -368,8 +350,7 @@
               "RelativeToolTip": "Logging\\MessageLevel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:49:08.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T12:49:08.427Z"
             },
             {
               "$type": "Document",
@@ -381,8 +362,7 @@
               "RelativeToolTip": "Logging\\ILogger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:39:08.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:39:08.72Z"
             },
             {
               "$type": "Document",
@@ -394,8 +374,7 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAA8AAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-29T08:22:52.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T08:22:52.936Z"
             },
             {
               "$type": "Document",
@@ -407,8 +386,7 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAACcAAAAAAAAAAIBJwDYAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-04-29T07:40:42.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:40:42.538Z"
             }
           ]
         }
