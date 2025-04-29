@@ -1,5 +1,5 @@
 ﻿using JustCLI.Utilities;
-using Serilog;
+using JustCLI.Logging;
 
 namespace JustCLI.BuiltInCommands
 {
@@ -21,7 +21,7 @@ namespace JustCLI.BuiltInCommands
 
         public void Execute(FlagInputContainer flagEntries)
         {
-            Log.Logger.Information("Version: {Version}", _version);
+            Log.Info("Version: {Version}", _version);
         }
     }
 }

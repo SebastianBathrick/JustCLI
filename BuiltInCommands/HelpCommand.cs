@@ -1,5 +1,6 @@
 ﻿using JustCLI.Utilities;
-using Serilog;
+using JustCLI.Logging;
+using JustCLI.Helpers;
 
 namespace JustCLI.BuiltInCommands
 {
@@ -52,7 +53,7 @@ namespace JustCLI.BuiltInCommands
         /// </summary>
         public void Execute(FlagInputContainer flagEntries)
         {
-            Log.Information("{Help}: The following is a list of valid commands:", SCREEN_TITLE);
+            Log.Info("{Help}: The following is a list of valid commands:", SCREEN_TITLE);
             LogHelper.LogExtraLine();
 
             bool isDetailed = flagEntries.IsFlag(DETAILED_FLAG);
@@ -61,29 +62,29 @@ namespace JustCLI.BuiltInCommands
             {
                 if (isDetailed)
                 {
-                    Log.Information("{CommandTitle}", COMMAND_TITLE);
+                    Log.Info("{CommandTitle}", COMMAND_TITLE);
                 }
 
-                Log.Information("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
+                Log.Info("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
 
                 if(isDetailed)
                 {
                     if (command.Flags.Count() > 0)
                     {
                         LogHelper.LogExtraLine();
-                        Log.Information(FLAGS_TITLE);
+                        Log.Info(FLAGS_TITLE);
                         foreach (var flag in command.Flags)
-                            Log.Information("\t" + flag.ToString(), flag.name);
+                            Log.Info("\t\t" + flag.ToString(), flag.name);
                     }
+                }
 
-                    LogHelper.LogExtraLine();
-                }         
+                LogHelper.LogExtraLine();
             }
 
             if (!isDetailed)
             {
                 LogHelper.LogExtraLine();
-                Log.Information("{Note}: View a more detailed list by typing space and {Flag} after the {Help} command.",
+                Log.Info("{Note}: View a more detailed list by typing space and {Flag} after the {Help} command.",
                     "Note",
                     Flags[0].name,
                     ICommand.PREFIX + Name

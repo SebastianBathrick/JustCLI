@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>JustCLI</Title>
-    <Version>0.0.171-alpha</Version>
+    <Version>0.1.0-alpha</Version>
     <Authors>Sebastian Bathrick</Authors>
     <Description>A lightweight CLI framework that trims the fat.</Description>
 	<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
@@ -25,11 +25,16 @@
 	<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
 	  <None Include="$(OutputPath)$(AssemblyName).xml" pack="true" packagePath="lib\netX.Y\" />
-	  <PackageReference Include="Serilog" Version="4.2.0" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
-    <PackageReference Include="TextCopy" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>

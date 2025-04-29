@@ -1,6 +1,6 @@
-﻿using Serilog;
+﻿using JustCLI.Logging;
 
-namespace JustCLI.Utilities
+namespace JustCLI.Helpers
 {
     public class PromptHelper
     {
@@ -14,15 +14,15 @@ namespace JustCLI.Utilities
             string? prompt = null,
             Action[]? actions = null)
         {
-            if(!string.IsNullOrEmpty(prompt))
-                Log.Information("{Prompt}", prompt);
+            if (!string.IsNullOrEmpty(prompt))
+                Log.Info("{Prompt}", prompt);
 
             for (int i = 1; i <= options.Length; i++)
-                Log.Information("{Index}: {Option}", i, options[i - 1]);
+                Log.Info("{Index}: {Option}", i, options[i - 1]);
 
             do
             {
-                Log.Information("{Msg} {Min}-{Max}:", "Please select an option", 1, options.Length);
+                Log.Info("{Msg} {Min}-{Max}:", "Please select an option", 1, options.Length);
 
                 string? input = Console.ReadLine();
 
@@ -53,7 +53,7 @@ namespace JustCLI.Utilities
             Action? onNo = null
             )
         {
-            Log.Information("{Message} (y/n):", promptMessage);
+            Log.Info("{Message} (y/n):", promptMessage);
             while (true)
             {
                 string? input = Console.ReadLine();
@@ -70,13 +70,13 @@ namespace JustCLI.Utilities
                 {
                     onYes?.Invoke();
                     return true;
-                }                    
+                }
                 else if (input.ToLower() == "n")
                 {
                     onNo?.Invoke();
                     return false;
                 }
-                    
+
                 Log.Error("Invalid input. Please enter 'y' or 'n':");
             }
         }

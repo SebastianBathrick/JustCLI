@@ -1,7 +1,8 @@
-﻿using JustCLI.BuiltInCommands;
-using JustCLI.Utilities;
-using Serilog;
-using Serilog.Core;
+﻿using JustCLI.Utilities;
+using JustCLI.BuiltInCommands;
+using JustCLI.Logging;
+using System.ComponentModel;
+
 
 namespace JustCLI
 {
@@ -12,19 +13,17 @@ namespace JustCLI
     {
         #region Variables
         private static CLI _instance = new CLI();
-        private static bool _isDiffLogger = false;
 
-        // Built-In Commands
         private HelpCommand? _helpCommand;
         private VersionCommand? _versionCommand;
+
         private ArgContainer _argContainer;
         private Dictionary<string, ICommand> _commandDict;
 
         private ICommand? _defaultCommand;
         private ICommand[] _builtInCommands;
 
-        private bool _isExiting = false;
-        
+        private bool _isExiting = false;       
         #endregion
 
         #region Setup Methods
@@ -44,10 +43,6 @@ namespace JustCLI
                 ];
 
             AddCommands(_builtInCommands);
-
-            if(!_isDiffLogger)
-                // Instantiate Serilog logger
-                CreateLogger();
         }
         #endregion
 
@@ -84,10 +79,11 @@ namespace JustCLI
                 // If the user chose to enter more arguments after the initial iteration
                 if (!isFirstPass)
                 {
-                    // GetValue the arguments through a prompt asking for the user to enter a string
-                    var newArgs = PrimitiveIOHelper.GetStringFromUser("additional arguments").
-                        Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-                    _argContainer = new ArgContainer(newArgs);
+                    Log.Info("Please enter {Arg}:", "valid argument(s)");
+                    string? rawUserInput = Console.ReadLine();
+                    rawUserInput ??= string.Empty;
+
+                    _argContainer = new ArgContainer(SplitSpacedText(rawUserInput));
                 }
 
                 if (_argContainer.IsEmpty)
@@ -227,7 +223,7 @@ namespace JustCLI
         {
             _instance._isExiting = isExiting;
             if (isExiting)
-                Log.Information("Exiting CLI.");             
+                Log.Info("Exiting CLI.");             
         }
 
         /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
@@ -253,7 +249,7 @@ namespace JustCLI
         /// <summary> Adds command to singleton instance. Should be called only before Start! </summary>
         public static void AddCommand(ICommand command)
         {
-            if (!IsCommandAlreadyAdded(command))
+            if (!_instance.IsCommandAlreadyAdded(command))
             {
                 if (command.MinFlagCount > command.Flags.Length)
                     throw new Exception($"Command {command.Name} has more required flags than available. " +
@@ -277,9 +273,6 @@ namespace JustCLI
 
             _instance._versionCommand.SetVersion(version);
         }
-        
-        public static void DefineLogger(Logger logger) =>
-            Log.Logger = logger;
         #endregion
 
         #region Flag Methods
@@ -388,7 +381,7 @@ namespace JustCLI
 
             string helpFullName = ICommand.PREFIX + HelpCommand.NAME;
 
-            Log.Information("Use {Help} to display all valid commands. Optionally follow with the {Detailed} flag to see valid flags.",
+            Log.Info("Use {Help} to display all valid commands. Optionally follow with the {Detailed} flag to see valid flags.",
                 helpFullName, _helpCommand.Flags[0].name);
         }
 
@@ -403,22 +396,11 @@ namespace JustCLI
                     _helpCommand.AddCommand(command);
         }
 
-        private static bool IsCommandAlreadyAdded(ICommand command) =>
+        private string[] SplitSpacedText(string text) =>
+            text.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+        
+        private bool IsCommandAlreadyAdded(ICommand command) =>
             _instance._commandDict.ContainsKey(ICommand.PREFIX + command.Name);
-
-        public void CreateLogger(ILogger? logger = null)
-        {
-            if (logger == null)
-                Log.Logger = new LoggerConfiguration()
-                    .MinimumLevel.Debug()
-                    .WriteTo.Console()
-                    .CreateLogger();
-            else
-            {
-                _isDiffLogger = true;
-                Log.Logger = logger;
-            }             
-        }
         #endregion
     }
 }

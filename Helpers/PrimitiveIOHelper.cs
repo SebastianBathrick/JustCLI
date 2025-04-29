@@ -1,6 +1,6 @@
-﻿using Serilog;
+﻿using JustCLI.Logging;
 
-namespace JustCLI.Utilities
+namespace JustCLI.Helpers
 {
     public class PrimitiveIOHelper
     {
@@ -8,7 +8,7 @@ namespace JustCLI.Utilities
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
         public static int GetIntFromUser(string valueName)
         {
-            Log.Information("Please enter a value for {ValueName} (int):", valueName);
+            Log.Info("Please enter a value for {ValueName} (int):", valueName);
 
             while (true)
             {
@@ -23,7 +23,7 @@ namespace JustCLI.Utilities
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
         public static float GetFloatFromUser(string valueName)
         {
-            Log.Information("Please enter a value for {ValueName} (float):", valueName);
+            Log.Info("Please enter a value for {ValueName} (float):", valueName);
             while (true)
             {
                 string? input = Console.ReadLine();
@@ -37,7 +37,7 @@ namespace JustCLI.Utilities
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
         public static string GetStringFromUser(string valueName)
         {
-            Log.Information("Please enter a value for {ValueName} (string):", valueName);
+            Log.Info("Please enter a value for {ValueName} (string):", valueName);
             while (true)
             {
                 string? input = Console.ReadLine();
@@ -51,7 +51,7 @@ namespace JustCLI.Utilities
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
         public static bool GetBoolFromUser(string valueName)
         {
-            Log.Information("Please enter a value for {ValueName} (true or false):", valueName);
+            Log.Info("Please enter a value for {ValueName} (true or false):", valueName);
             while (true)
             {
                 string? input = Console.ReadLine();

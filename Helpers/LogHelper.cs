@@ -1,6 +1,6 @@
-﻿using Serilog;
+﻿using JustCLI.Logging;
 
-namespace JustCLI.Utilities
+namespace JustCLI.Helpers
 {
     public static class LogHelper
     {
@@ -8,7 +8,7 @@ namespace JustCLI.Utilities
         public static void PrintHeader(string header)
         {
             header = header.ToUpper();
-            Log.Information("[{Header}]", header);
+            Log.Info("[{Header}]", header);
         }
 
         /// <summary> Logs a blank line. </summary>
@@ -16,14 +16,14 @@ namespace JustCLI.Utilities
         {
             for (int i = 0; i < numLines; i++)
             {
-                Log.Information("");
+                Log.Info("");
             }
         }
 
         /// <summary> Logs a line using subtract symbols. </summary>
         public static void LogLineVisual()
         {
-            Log.Information("--------------------------------------------------");
+            Log.Info("--------------------------------------------------");
         }
     }
 }

@@ -1,65 +1,24 @@
 ﻿/*
-using JustCLI;
-using JustCLI.Utilities;
-using Serilog;
+using JustCLI.Logging;
 
-// Setup logging
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .WriteTo.Console()
-    .CreateLogger();
+Log.Info("Hello, {Name}!", "Alice");
+Log.Warning("Disk space low: {FreeSpace} GB left", 2.5);
+Log.Error(new Exception("File {FileName} not found"), "config.json");
+Log.Fatal("Unrecoverable error in module {Module}", "AuthService");
+Log.Debug("Loaded {Count} items from cache", 42);
 
-// Add commands using the ActionCommand class
-CLI.AddCommands([
-    new ActionCommand(
-        "hello",
-        "Prints hello world.",
-        (flagEntries) => {
-            Log.Information("Hello, world!");
-        }
-    ),
-    new ActionCommand(
-        "greet",
-        "Greets a user by name.",
-        (flagEntries) => {
-            if (flagEntries.TryGetValue("name", out string? name))
-                Log.Information("Hello, {Name}!", name);
-            else
-                Log.Information("Hello, anonymous user!");
-        },
-        [new Flag("name", "The name to greet", false, true)]
-    )
-]);
+// No placeholders — nothing should be colored in message
+Log.Info("System started without parameters.");
 
-// Set application version
-CLI.SetVersion("1.0.0");
+// More placeholders than args — unfilled placeholders should be ignored
+Log.Warning("Expecting {One}, {Two}, {Three}", "First", "Second");
 
-// Add a default command (executes when no command is provided)
-CLI.AddDefaultCommand(new ActionCommand(
-    "default",
-    "Default command",
-    (flagEntries) => {
-        Log.Information("Default command executed");
-    }
-));
+// More args than placeholders — extra args should be ignored
+Log.Debug("Using {Lang}", "C#", "ExtraArg1", "ExtraArg2");
 
-// Define a custom logger (optional)
-var customLogger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .CreateLogger();
-CLI.DefineLogger(customLogger);
+// Placeholder edge case: no braces at all
+Log.Fatal("Critical shutdown requested immediately.");
 
-// Start the CLI with options
-CLI.Start(
-    requireCommand: false,       // Error if no command is provided
-    allowMoreCommands: true,    // Allow the user to enter more commands after execution
-    argOverride: null,          // Override command-line arguments (optional)
-    useBuiltInCommands: true    // Include built-in commands (help, version, clear, exit)
-);
-
-string input = PrimitiveIOHelper.GetStringFromUser("input name");
-int number = PrimitiveIOHelper.GetIntFromUser("number");
-float myNum = PrimitiveIOHelper.GetFloatFromUser("decimal");
-bool flag = PrimitiveIOHelper.GetBoolFromUser("boolean");
+// Placeholder edge case: malformed token (no closing brace)
+Log.Info("Bad token: {Unfinished", "ShouldNotShow");
 */

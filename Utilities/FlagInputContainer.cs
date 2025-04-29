@@ -1,6 +1,4 @@
-﻿using Serilog;
-
-namespace JustCLI.Utilities
+﻿namespace JustCLI.Utilities
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
     public class FlagInputContainer

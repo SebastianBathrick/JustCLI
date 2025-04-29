@@ -1,7 +1,7 @@
-﻿using Serilog;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using JustCLI.Logging;
 
-namespace JustCLI.Utilities
+namespace JustCLI.Helpers
 {
     public static class FileIOHelper
     {
@@ -49,7 +49,7 @@ namespace JustCLI.Utilities
         /// <remarks> Loops continously until the user makes a valid entry. </remarks>
         public static string GetDirectoryFromUser(string valueName)
         {
-            Log.Information("Please enter a value for {ValueName} (directory):", valueName);
+            Log.Info("Please enter a value for {ValueName} (directory):", valueName);
             while (true)
             {
                 string? input = Console.ReadLine();
@@ -66,7 +66,7 @@ namespace JustCLI.Utilities
             string valueName, bool allowEmptyFile = false, bool doesRequireFile = true
             )
         {
-            Log.Information("Please enter a value for {ValueName} (file path):", valueName);
+            Log.Info("Please enter a value for {ValueName} (file path):", valueName);
             do
             {
                 string? enteredFilePath = Console.ReadLine();
@@ -93,9 +93,9 @@ namespace JustCLI.Utilities
                         continue;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
-                    Log.Error(e, 
+                    Log.Error(e,
                         "An exception was thrown occurred while reading the file: {FilePath}. " +
                         "Likely a bug. Report to application author.", enteredFilePath);
                     continue;
@@ -139,7 +139,7 @@ namespace JustCLI.Utilities
                 else if (contentLines != null)
                     File.WriteAllLines(enteredFilePath, contentLines);
 
-                Log.Information("The file {Name} was created successfully.", enteredFilePath);
+                Log.Info("The file {Name} was created successfully.", enteredFilePath);
                 return enteredFilePath; // Add this line to fix the function
             }
             while (true);
@@ -159,7 +159,7 @@ namespace JustCLI.Utilities
                     myProcess.Start();
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Log.Error(e, "An error occurred while opening the application: {App}", app);
             }
