@@ -15,7 +15,7 @@ namespace JustCLI.Utilities
                 string? input = Console.ReadLine();
                 if (int.TryParse(input, out int result))
                     return result;
-                Log.Error("Invalid enteredFilePath. Please enter a valid integer:");
+                Log.Error("Invalid argument. Please enter a valid integer:");
             }
         }
 
@@ -29,7 +29,7 @@ namespace JustCLI.Utilities
                 string? input = Console.ReadLine();
                 if (float.TryParse(input, out float result))
                     return result;
-                Log.Error("Invalid enteredFilePath. Please enter a valid float:");
+                Log.Error("Invalid argument. Please enter a valid float:");
             }
         }
 
@@ -43,7 +43,7 @@ namespace JustCLI.Utilities
                 string? input = Console.ReadLine();
                 if (!string.IsNullOrEmpty(input))
                     return input;
-                Log.Error("Invalid enteredFilePath. Please enter a valid string:");
+                Log.Error("Invalid argument. Please enter a valid string:");
             }
         }
 
@@ -57,7 +57,7 @@ namespace JustCLI.Utilities
                 string? input = Console.ReadLine();
                 if (bool.TryParse(input, out bool result))
                     return result;
-                Log.Error("Invalid enteredFilePath. Please enter a valid boolean:");
+                Log.Error("Invalid argument. Please enter a valid boolean:");
             }
         }
     }

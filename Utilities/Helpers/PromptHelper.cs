@@ -77,7 +77,7 @@ namespace JustCLI.Utilities
                     return false;
                 }
                     
-                Log.Error("Invalid enteredFilePath. Please enter 'y' or 'n':");
+                Log.Error("Invalid input. Please enter 'y' or 'n':");
             }
         }
 
