@@ -13,7 +13,7 @@
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
     <PackageId>JustCLInterface</PackageId>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
     <BaseOutputPath>Builds\</BaseOutputPath>
     

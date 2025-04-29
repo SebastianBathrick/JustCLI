@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "JustCLI/0.0.16-alpha": {
+      "JustCLI/0.0.161-alpha": {
         "dependencies": {
           "Serilog": "4.2.0",
           "Serilog.Sinks.Console": "6.0.0",
@@ -57,7 +57,7 @@
     }
   },
   "libraries": {
-    "JustCLI/0.0.16-alpha": {
+    "JustCLI/0.0.161-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

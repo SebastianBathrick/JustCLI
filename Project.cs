@@ -1,4 +1,5 @@
-﻿using JustCLI;
+﻿/*
+using JustCLI;
 using JustCLI.Utilities;
 using Serilog;
 
@@ -61,3 +62,4 @@ string input = PrimitiveIOHelper.GetStringFromUser("input name");
 int number = PrimitiveIOHelper.GetIntFromUser("number");
 float myNum = PrimitiveIOHelper.GetFloatFromUser("decimal");
 bool flag = PrimitiveIOHelper.GetBoolFromUser("boolean");
+*/
