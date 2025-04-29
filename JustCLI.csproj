@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>JustCLI</Title>
-    <Version>0.0.17-alpha</Version>
+    <Version>0.0.171-alpha</Version>
     <Authors>Sebastian Bathrick</Authors>
     <Description>A lightweight CLI framework that trims the fat.</Description>
 	<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
@@ -21,6 +21,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
 	<IncludeSymbols>true</IncludeSymbols>
 	<IncludeSource>true</IncludeSource>
+	<RepositoryType>git</RepositoryType>
+	<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
