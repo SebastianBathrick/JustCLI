@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JustCLI</name>
+    </assembly>
+    <members>
+        <member name="M:JustCLI.BuiltInCommands.ClearTerminalCommand.Execute(JustCLI.Utilities.FlagInputContainer)">
+            <summary>
+            Clears the terminal.
+            </summary>
+        </member>
+        <member name="T:JustCLI.BuiltInCommands.HelpCommand">
+            <summary>
+            ICommand that displays help information for commands.
+            </summary>
+        </member>
+        <member name="M:JustCLI.BuiltInCommands.HelpCommand.AddCommand(JustCLI.ICommand)">
+            <summary> 
+            Adds a valid command to list when executed. Needs to be called in CLI's constructor. 
+            </summary>
+        </member>
+        <member name="M:JustCLI.BuiltInCommands.HelpCommand.Execute(JustCLI.Utilities.FlagInputContainer)">
+            <summary> 
+            Displays a list of valid commands, and optionally their flags, using Serialog instance.
+            </summary>
+        </member>
+        <member name="T:JustCLI.BuiltInCommands.VersionCommand">
+            <summary>
+            ICommand that displays the version of the app in use (to be set by client.)
+            </summary>
+        </member>
+        <member name="T:JustCLI.CLI">
+            <summary>
+            Singleton class that handles command line arguments and executes commands.
+            </summary>
+        </member>
+        <member name="M:JustCLI.CLI.ParseCommands">
+            <summary> Parses each argument and executes commands in the order the user provided. </summary>
+        </member>
+        <member name="M:JustCLI.CLI.Start(System.Boolean,System.Boolean,System.String[],System.Boolean)">
+            <summary> 
+            Called by client to start reading commands (no commands should be added 
+            after calling.)
+            </summary>
+            <param name="requireCommand">Whether an error will be printed and the CLI
+            will exit if there are no args.</param>
+            <param name="allowMoreCommands">Whether the user is able to enter more 
+            commands after environment args.</param>
+            <param name="argOverride">If not null overrides initial args provided 
+            to the program.</param>
+            <param name="useBuiltInCommands">Whether or not built-in commands will 
+            be included in the interface</param>
+        </member>
+        <member name="M:JustCLI.CLI.RemoveCommand(System.String)">
+            <summary> Removes previously added or built-in command. </summary>
+            <param name="commandName">Name of command to remove with no prefix.</param>
+        </member>
+        <member name="M:JustCLI.CLI.ClearCommands(System.Boolean)">
+            <summary> Removes all client and optionally built-in commands (including the default.) </summary>
+        </member>
+        <member name="M:JustCLI.CLI.SetExiting(System.Boolean)">
+            <summary> Adds all built in commands to CLI instance. </summary>
+        </member>
+        <member name="M:JustCLI.CLI.AddDefaultCommand(JustCLI.ICommand)">
+            <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
+        </member>
+        <member name="M:JustCLI.CLI.AddCommands(JustCLI.ICommand[])">
+            <summary> Adds command(s) to singleton instance. Should be called only before Start! </summary>
+        </member>
+        <member name="M:JustCLI.CLI.AddCommand(JustCLI.ICommand)">
+            <summary> Adds command to singleton instance. Should be called only before Start! </summary>
+        </member>
+        <member name="M:JustCLI.CLI.SetVersion(System.String)">
+            <summary> 
+            Sets the version of the CLI application that will be shown when using
+            the built-in version command
+            </summary>
+        </member>
+        <member name="M:JustCLI.CLI.TryGetCommandFlags(JustCLI.ICommand,JustCLI.Utilities.FlagInputContainer@)">
+            <summary> Gets any userFlagsAndValues trailing the current command and before the next command. </summary>
+            <returns> Returns true if all flags and values (or lack-thereof) have been collected successfully. </returns>
+        </member>
+        <member name="M:JustCLI.CLI.GetPossibleFlags">
+            <summary> 
+            Retreives each arg following the current command until there are no more 
+            or another command is found.
+            </summary>
+        </member>
+        <member name="M:JustCLI.CLI.TryParseFlag(System.String,JustCLI.ICommand,System.Nullable{JustCLI.Flag}@)">
+            <summary> Ensures the argument is a flag and a valid one for the given command. </summary>
+        </member>
+        <member name="M:JustCLI.CLI.PopulateHelpList">
+            <summary> Populates the help command with all client and built-in commands </summary>
+        </member>
+        <member name="P:JustCLI.ICommand.Name">
+            <summary> The name the user will type to use command. </summary>
+        </member>
+        <member name="P:JustCLI.ICommand.Description">
+            <summary> The description of the command that will be shown by the help command </summary>
+        </member>
+        <member name="P:JustCLI.ICommand.MinFlagCount">
+            <summary> 
+            Minimum number of flags that need to follow to use this command.
+            </summary>
+            <remarks>
+            Important when there are multiple optional flags but at least one needs to be entered.
+            </remarks>
+        </member>
+        <member name="P:JustCLI.ICommand.Flags">
+            <summary> Required and optional flags that can follow the command (or lack thereof) </summary>
+        </member>
+        <member name="M:JustCLI.ICommand.Execute(JustCLI.Utilities.FlagInputContainer)">
+            <summary> Defines what happens when the user enters this command into the CLI. </summary>
+            <param name="flagEntries">Holds flags the user entered and any values associated with them.</param>   
+        </member>
+        <member name="M:JustCLI.ICommand.TryGetFlag(System.String,System.Nullable{JustCLI.Flag}@)">
+            <summary> Returns true and the flag of the given name if it exists. </summary>
+        </member>
+        <member name="M:JustCLI.ICommand.HasNoRequiredFlags">
+            <summary> Returns true if the command has no required flags. </summary>
+        </member>
+        <member name="M:JustCLI.ICommand.GetRequiredFlags">
+            <summary> Returns a list containing all required flags for this command. </summary>
+        </member>
+        <member name="T:JustCLI.Utilities.FlagInputContainer">
+            <summary> Container for flags and values provided by the user after a command. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.FlagInputContainer.AddFlag(JustCLI.Flag,System.String)">
+            <summary> Add a flag and value/null provided by user arguments. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.FlagInputContainer.PeekFlagName">
+            <summary> Gets the name of the first flag in the container. </summary>
+            <exception cref="T:System.InvalidOperationException">Throws if the container is empty.</exception>
+        </member>
+        <member name="M:JustCLI.Utilities.FlagInputContainer.TryGetValue(System.String,System.String@)">
+            <summary> 
+            Attempts to remove flag at the front of the structure and return its value.
+            </summary>
+            <param name="flagName">The name of the flag to search for.</param>
+            <param name="value">The value associated with the flag, if found.</param>
+        </member>
+        <member name="M:JustCLI.Utilities.FlagInputContainer.IsFlag(System.String)">
+            <summary>
+            Returns true if the flag of the given name is found in the container and false otherwise.
+            </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.FileIOHelper.TryGetFileContents(System.String,System.String[]@,System.Boolean)">
+            <summary>
+            Tries to read the contents of a file at the specified path.
+            </summary>
+            <param name="filePath">Valid or invalid file path</param>
+            <param name="fileLines">Contains each line of the file if found, and empty if not found.</param>
+            <param name="allowEmpty">If true, an empty file will not print a message and return false.</param>
+            <returns>Returns true if a file is found and meets the requirements specified.</returns>
+        </member>
+        <member name="M:JustCLI.Utilities.FileIOHelper.GetDirectoryFromUser(System.String)">
+            <summary> Gets a directory from the user and verifies the directory exists. </summary>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.FileIOHelper.GetFilePathFromUser(System.String,System.Boolean,System.Boolean)">
+            <summary> Gets a filepath from the user and verifies the file exists. </summary>
+            <param name="allowEmptyFile"> If true, a path for an empty file can be returned.</param>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.FileIOHelper.CreateFile(System.String,System.String,System.String[])">
+            <summary> Prompts the user for a file path until the file is successfully created. </summary>
+            <remarks> You can populate a file using an array of strings(lines), one string, or
+            just leave it empty. </remarks>
+            <returns>Returns the file path of the file created.</returns>
+        </member>
+        <member name="M:JustCLI.Utilities.FileIOHelper.OpenApplication(System.String,System.String)">
+            <summary> Opens an application with any provided arguments. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.LogHelper.PrintHeader(System.String)">
+            <summary> Logs a header enclosed in square braces. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.LogHelper.LogExtraLine(System.Int32)">
+            <summary> Logs a blank line. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.LogHelper.LogLineVisual">
+            <summary> Logs a line using subtract symbols. </summary>
+        </member>
+        <member name="M:JustCLI.Utilities.PrimitiveIOHelper.GetIntFromUser(System.String)">
+            <summary> Gets a int literal from the user. </summary>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.PrimitiveIOHelper.GetFloatFromUser(System.String)">
+            <summary> Gets a float literal from the user. </summary>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.PrimitiveIOHelper.GetStringFromUser(System.String)">
+            <summary> Gets a string literal from the user. </summary>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.PrimitiveIOHelper.GetBoolFromUser(System.String)">
+            <summary> Gets a boolean literal from the user. </summary>
+            <remarks> Loops continously until the user makes a valid entry. </remarks>
+        </member>
+        <member name="M:JustCLI.Utilities.PromptHelper.PickOption(System.String[],System.String,System.Action[])">
+            <summary>
+            Prompts the user for a selection from a list of options. Each option pairs with 
+            an Action of the same index if the Action array is not null.
+            </summary>
+            <returns>Will display options as option array 1-N+1, but will return 0-N</returns>
+        </member>
+        <member name="M:JustCLI.Utilities.PromptHelper.YesNoPrompt(System.String,System.Boolean,System.Boolean,System.Action,System.Action)">
+            <summary> Prompts the user for a yes or no response. </summary>
+        </member>
+    </members>
+</doc>

@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>JustCLI</Title>
-    <Version>0.0.161-alpha</Version>
+    <Version>0.0.17-alpha</Version>
     <Authors>Sebastian Bathrick</Authors>
     <Description>A lightweight CLI framework that trims the fat.</Description>
 	<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
@@ -16,17 +16,29 @@
     <OutputType>Library</OutputType>
     <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
     <BaseOutputPath>Builds\</BaseOutputPath>
-    
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+	<IncludeSymbols>true</IncludeSymbols>
+	<IncludeSource>true</IncludeSource>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="4.2.0" />
+	  <None Include="$(OutputPath)$(AssemblyName).xml" pack="true" packagePath="lib\netX.Y\" />
+	  <PackageReference Include="Serilog" Version="4.2.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
     <PackageReference Include="TextCopy" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Release\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
