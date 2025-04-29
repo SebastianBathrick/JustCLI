@@ -1,5 +1,6 @@
-﻿using JustCLI.Utilities;
-using JustCLI.Logging;
+﻿using JustCLI.Logging;
+using JustCLI.Utilities;
+
 
 namespace JustCLI.BuiltInCommands
 {

@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using JustCLI.Logging.Interface;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 namespace JustCLI.Logging.Default
@@ -9,25 +10,9 @@ namespace JustCLI.Logging.Default
     /// severity-based message filtering, and cross-platform ANSI support.
     /// Includes specialized handling for exceptions and configurable minimum log level.
     /// </summary>
-    public class TerminalLogger : ILogger
+    internal class TerminalLogger : IJustCLILogger
     {
         private const int PROPERTY_COLOR = 36; // Cyan for inserted values
-
-        #region Constants
-        // Label texts
-        private const string FATAL_LABEL_TEXT = "Fatal";
-        private const string ERROR_LABEL_TEXT = "Error";
-        private const string WARNING_LABEL_TEXT = "Warning";
-        private const string INFO_LABEL_TEXT = "";
-        private const string DEBUG_LABEL_TEXT = "Debug";
-
-        // Label colors
-        private const int FATAL_COLOR = 31;
-        private const int ERROR_COLOR = 91;
-        private const int WARNING_COLOR = 33;
-        private const int INFO_COLOR = 32;
-        private const int DEBUG_COLOR = 90;
-        #endregion
 
         #region Variables
         private readonly Regex _propertyRegex = new(@"\{[^}]+\}");
@@ -185,7 +170,22 @@ namespace JustCLI.Logging.Default
         /// <returns><c>true</c> if the operation succeeds; otherwise, <c>false</c>.</returns>
         [DllImport("kernel32.dll")]
         private static extern bool SetConsoleMode(IntPtr hConsoleHandle, uint dwMode);
+        #endregion
 
+        #region Constants
+        // Label texts
+        private const string FATAL_LABEL_TEXT = "Fatal";
+        private const string ERROR_LABEL_TEXT = "Error";
+        private const string WARNING_LABEL_TEXT = "Warning";
+        private const string INFO_LABEL_TEXT = "";
+        private const string DEBUG_LABEL_TEXT = "Debug";
+
+        // Label colors
+        private const int FATAL_COLOR = 31;
+        private const int ERROR_COLOR = 91;
+        private const int WARNING_COLOR = 33;
+        private const int INFO_COLOR = 32;
+        private const int DEBUG_COLOR = 90;
         #endregion
     }
 }

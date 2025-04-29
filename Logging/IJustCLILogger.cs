@@ -1,7 +1,7 @@
-﻿namespace JustCLI.Logging
+﻿namespace JustCLI.Logging.Interface
 {
     /// <summary>Defines a logger capable of writing messages with different severity levels.</summary>
-    public interface ILogger
+    public interface IJustCLILogger
     {
         /// <summary>Logs an informational message.</summary>
         void Info(string message, params object[] properties);

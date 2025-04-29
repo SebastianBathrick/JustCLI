@@ -13,7 +13,7 @@
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
     <PackageId>JustCLInterface</PackageId>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
     <BaseOutputPath>Builds\</BaseOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -23,6 +23,7 @@
 	<IncludeSource>true</IncludeSource>
 	<RepositoryType>git</RepositoryType>
 	<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -39,6 +40,12 @@
 
   <ItemGroup>
     <Folder Include="Release\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.2.1-dev-02352" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
+    <PackageReference Include="Xunit" Version="2.9.3" />
   </ItemGroup>
 
   <ItemGroup>

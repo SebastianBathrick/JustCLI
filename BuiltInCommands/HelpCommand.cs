@@ -1,5 +1,5 @@
-﻿using JustCLI.Utilities;
-using JustCLI.Logging;
+﻿using JustCLI.Logging;
+using JustCLI.Utilities;
 using JustCLI.Helpers;
 
 namespace JustCLI.BuiltInCommands
@@ -77,8 +77,6 @@ namespace JustCLI.BuiltInCommands
                             Log.Info("\t\t" + flag.ToString(), flag.name);
                     }
                 }
-
-                LogHelper.LogExtraLine();
             }
 
             if (!isDetailed)

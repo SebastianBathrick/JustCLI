@@ -34,29 +34,37 @@
             Singleton class that handles command line arguments and executes commands.
             </summary>
         </member>
+        <member name="M:JustCLI.CLI.AddCommandsToHelp">
+            <summary> Adds client commands to the help list (provided there is a help command) </summary>
+        </member>
         <member name="M:JustCLI.CLI.ParseCommands">
             <summary> Parses each argument and executes commands in the order the user provided. </summary>
         </member>
+        <member name="M:JustCLI.CLI.TryGetCommandFlags(JustCLI.ICommand,JustCLI.Utilities.FlagInputContainer@)">
+            <summary> Gets any userFlagsAndValues trailing the current command and before the next command. </summary>
+            <returns> Returns true if all flags and values (or lack-thereof) have been collected successfully. </returns>
+        </member>
+        <member name="M:JustCLI.CLI.GetPossibleFlagsOrValues">
+            <summary> Returns an empty list or args up until the _argContainer is empty, or the next arg is a command </summary>
+        </member>
         <member name="M:JustCLI.CLI.Start(System.Boolean,System.Boolean,System.String[],System.Boolean)">
             <summary> 
-            Called by client to start reading commands (no commands should be added 
-            after calling.)
+            Called by client to start reading commands (no commands should be added  after calling.)
             </summary>
-            <param name="requireCommand">Whether an error will be printed and the CLI
-            will exit if there are no args.</param>
-            <param name="allowMoreCommands">Whether the user is able to enter more 
-            commands after environment args.</param>
-            <param name="argOverride">If not null overrides initial args provided 
-            to the program.</param>
-            <param name="useBuiltInCommands">Whether or not built-in commands will 
+            <param name="requireCommand">Whether an error will be printed and the CLI will exit if 
+            there are no args.</param>
+            <param name="allowMoreCommands">Whether the user is able to enter more  commands after
+            environment args.</param>
+            <param name="argOverride">If not null overrides initial args provided to the program.</param>
+            <param name="useHelp">Whether or not built-in commands will 
             be included in the interface</param>
         </member>
         <member name="M:JustCLI.CLI.RemoveCommand(System.String)">
-            <summary> Removes previously added or built-in command. </summary>
-            <param name="commandName">Name of command to remove with no prefix.</param>
+            <summary> Removes client command with the provided name with no command prefix. </summary>
         </member>
         <member name="M:JustCLI.CLI.ClearCommands(System.Boolean)">
-            <summary> Removes all client and optionally built-in commands (including the default.) </summary>
+            <summary> Removes all client defined commands. </summary>
+            <remarks> Does not include help command because it can be disabled on start. </remarks>
         </member>
         <member name="M:JustCLI.CLI.SetExiting(System.Boolean)">
             <summary> Adds all built in commands to CLI instance. </summary>
@@ -68,29 +76,7 @@
             <summary> Adds command(s) to singleton instance. Should be called only before Start! </summary>
         </member>
         <member name="M:JustCLI.CLI.AddCommand(JustCLI.ICommand)">
-            <summary> Adds command to singleton instance. Should be called only before Start! </summary>
-        </member>
-        <member name="M:JustCLI.CLI.SetVersion(System.String)">
-            <summary> 
-            Sets the version of the CLI application that will be shown when using
-            the built-in version command
-            </summary>
-        </member>
-        <member name="M:JustCLI.CLI.TryGetCommandFlags(JustCLI.ICommand,JustCLI.Utilities.FlagInputContainer@)">
-            <summary> Gets any userFlagsAndValues trailing the current command and before the next command. </summary>
-            <returns> Returns true if all flags and values (or lack-thereof) have been collected successfully. </returns>
-        </member>
-        <member name="M:JustCLI.CLI.GetPossibleFlags">
-            <summary> 
-            Retreives each arg following the current command until there are no more 
-            or another command is found.
-            </summary>
-        </member>
-        <member name="M:JustCLI.CLI.TryParseFlag(System.String,JustCLI.ICommand,System.Nullable{JustCLI.Flag}@)">
-            <summary> Ensures the argument is a flag and a valid one for the given command. </summary>
-        </member>
-        <member name="M:JustCLI.CLI.PopulateHelpList">
-            <summary> Populates the help command with all client and built-in commands </summary>
+            <summary> Adds command to singleton instance. </summary>
         </member>
         <member name="P:JustCLI.ICommand.Name">
             <summary> The name the user will type to use command. </summary>
@@ -184,47 +170,47 @@
         <member name="M:JustCLI.Helpers.PromptHelper.YesNoPrompt(System.String,System.Boolean,System.Boolean,System.Action,System.Action)">
             <summary> Prompts the user for a yes or no response. </summary>
         </member>
-        <member name="T:JustCLI.Logging.ILogger">
+        <member name="T:JustCLI.Logging.Interface.IJustCLILogger">
             <summary>Defines a logger capable of writing messages with different severity levels.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Info(System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Info(System.String,System.Object[])">
             <summary>Logs an informational message.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Warning(System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Warning(System.String,System.Object[])">
             <summary>Logs a warning message.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Error(System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Error(System.String,System.Object[])">
             <summary>Logs an error message.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Error(System.Exception,System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Error(System.Exception,System.String,System.Object[])">
             <summary>Logs an error message with an associated exception.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Fatal(System.Exception,System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Fatal(System.Exception,System.String,System.Object[])">
             <summary>Logs a fatal error message with an associated exception.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Fatal(System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Fatal(System.String,System.Object[])">
             <summary>Logs a fatal error message.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.Debug(System.String,System.Object[])">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.Debug(System.String,System.Object[])">
             <summary>Logs a debug message.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.GetMinimumLogLevel">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.GetMinimumLogLevel">
             <summary>Sets the minimum level of messages to be logged.</summary>
         </member>
-        <member name="M:JustCLI.Logging.ILogger.SetMinimumLogLevel(JustCLI.Logging.MessageLevel)">
+        <member name="M:JustCLI.Logging.Interface.IJustCLILogger.SetMinimumLogLevel(JustCLI.Logging.MessageLevel)">
             <summary>Sets the minimum level of messages to be logged.</summary>
         </member>
         <member name="T:JustCLI.Logging.Log">
             <summary>Provides a static, global interface for logging messages with configurable output and severity filtering.</summary>
+        </member>
+        <member name="M:JustCLI.Logging.Log.SetLogger(JustCLI.Logging.Interface.IJustCLILogger)">
+            <summary>Replaces the default IJustCLILogger with a client defined IJustCLILogger implementation.</summary>
         </member>
         <member name="M:JustCLI.Logging.Log.SetMinimumLevel(JustCLI.Logging.MessageLevel)">
             <summary>Sets the minimum message level that will be logged.</summary>
         </member>
         <member name="M:JustCLI.Logging.Log.GetMinimumLevel">
             <summary>Gets the current minimum log level.</summary>
-        </member>
-        <member name="M:JustCLI.Logging.Log.SetLogger(JustCLI.Logging.ILogger)">
-            <summary>Replaces the current logger with a custom implementation.</summary>
         </member>
         <member name="M:JustCLI.Logging.Log.Info(System.String,System.Object[])">
             <summary>Logs an informational message.</summary>
@@ -265,9 +251,14 @@
         <member name="F:JustCLI.Logging.MessageLevel.Debug">
             <summary>Diagnostic information useful during development.</summary>
         </member>
+        <member name="T:JustCLI.Logging.SerilogConsoleLogger">
+            <summary>
+            A simple Serilog-based logger that writes output to the console.
+            </summary>
+        </member>
         <member name="T:JustCLI.Logging.Default.TerminalLogger">
             <summary>
-            Provides a console-based implementation of <see cref="T:JustCLI.Logging.ILogger"/> that supports:
+            Provides a console-based implementation of <see cref="!:ILogger"/> that supports:
             structured message templates with placeholders, ANSI-colored output,
             severity-based message filtering, and cross-platform ANSI support.
             Includes specialized handling for exceptions and configurable minimum log level.
