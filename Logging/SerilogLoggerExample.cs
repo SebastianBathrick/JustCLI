@@ -1,4 +1,4 @@
-﻿using JustCLI.Logging.Interface;
+﻿/*using JustCLI.Logging.Interface;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
@@ -100,3 +100,4 @@ namespace JustCLI.Logging
         }
     }
 }
+*/

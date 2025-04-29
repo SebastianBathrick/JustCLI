@@ -3,104 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Documents\\JustCLI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\unittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:unittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\cli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\cli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sebastian\\Documents\\JustCLI\\obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\helpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\helpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\logging\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:logging\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\logging\\terminallogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:logging\\terminallogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\helpers\\fileiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:helpers\\fileiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\logging\\serilogloggerexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:logging\\serilogloggerexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\logging\\messagelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:logging\\messagelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\logging\\ijustclilogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:logging\\ijustclilogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\versioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\versioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\core\\actioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:core\\actioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\exitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\exitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:builtincommands\\clearterminalcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\flaginputcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:utilities\\flaginputcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\argcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:utilities\\argcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\helpers\\prompthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:helpers\\prompthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\helpers\\primitiveiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:helpers\\primitiveiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\helpers\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:helpers\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -113,336 +29,68 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T20:04:14.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MessageLevel.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\MessageLevel.cs",
-              "RelativeDocumentMoniker": "Logging\\MessageLevel.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\MessageLevel.cs",
-              "RelativeToolTip": "Logging\\MessageLevel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:49:08.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Log.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\Log.cs",
-              "RelativeDocumentMoniker": "Logging\\Log.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\Log.cs",
-              "RelativeToolTip": "Logging\\Log.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:29:06.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PromptHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\PromptHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\PromptHelper.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\PromptHelper.cs",
-              "RelativeToolTip": "Helpers\\PromptHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:37.319Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CLI.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CLI.cs",
-              "RelativeDocumentMoniker": "Core\\CLI.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\CLI.cs",
-              "RelativeToolTip": "Core\\CLI.cs",
-              "ViewState": "AgIAAD8BAAAAAAAAAAAgwEEBAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:20.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UnitTests.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\UnitTests.cs",
-              "RelativeDocumentMoniker": "UnitTests.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\UnitTests.cs",
-              "RelativeToolTip": "UnitTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:52:17.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TerminalLogger.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\TerminalLogger.cs",
-              "RelativeDocumentMoniker": "Logging\\TerminalLogger.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\TerminalLogger.cs",
-              "RelativeToolTip": "Logging\\TerminalLogger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:12:41.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IJustCLILogger.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\IJustCLILogger.cs",
-              "RelativeDocumentMoniker": "Logging\\IJustCLILogger.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\IJustCLILogger.cs",
-              "RelativeToolTip": "Logging\\IJustCLILogger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:39:08.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "JustCLI",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeDocumentMoniker": "JustCLI.csproj",
               "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeToolTip": "JustCLI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-29T06:27:12.646Z",
+              "WhenOpened": "2025-04-29T22:57:48.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FlagInputContainer.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\FlagInputContainer.cs",
-              "RelativeDocumentMoniker": "Utilities\\FlagInputContainer.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\FlagInputContainer.cs",
-              "RelativeToolTip": "Utilities\\FlagInputContainer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "JustCLI.AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0\\JustCLI.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:42.86Z",
+              "WhenOpened": "2025-04-29T22:49:07.035Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ActionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ActionCommand.cs",
-              "RelativeDocumentMoniker": "Core\\ActionCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ActionCommand.cs",
-              "RelativeToolTip": "Core\\ActionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:51:48.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ClearTerminalCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\ClearTerminalCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ClearTerminalCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\ClearTerminalCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:19.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HelpCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\HelpCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\HelpCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\HelpCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\HelpCommand.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAswE4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:35.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "VersionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\VersionCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\VersionCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\VersionCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\VersionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:51:34.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ICommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
-              "RelativeDocumentMoniker": "Core\\ICommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\ICommand.cs",
-              "RelativeToolTip": "Core\\ICommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:50:44.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SerilogLoggerExample.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\SerilogLoggerExample.cs",
-              "RelativeDocumentMoniker": "Logging\\SerilogLoggerExample.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Logging\\SerilogLoggerExample.cs",
-              "RelativeToolTip": "Logging\\SerilogLoggerExample.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T18:38:33.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FileIOHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\FileIOHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\FileIOHelper.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\FileIOHelper.cs",
-              "RelativeToolTip": "Helpers\\FileIOHelper.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAlwGMAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:55.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ArgContainer.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\ArgContainer.cs",
-              "RelativeDocumentMoniker": "Utilities\\ArgContainer.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\ArgContainer.cs",
-              "RelativeToolTip": "Utilities\\ArgContainer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T05:10:03.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Flag.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\Flag.cs",
-              "RelativeDocumentMoniker": "Core\\Flag.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\Flag.cs",
-              "RelativeToolTip": "Core\\Flag.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:31.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 0,
               "Title": "JustCLI.csproj",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeDocumentMoniker": "JustCLI.csproj",
               "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeToolTip": "JustCLI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-29T07:04:59.926Z",
+              "WhenOpened": "2025-04-29T22:46:40.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PrimitiveIOHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\PrimitiveIOHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\PrimitiveIOHelper.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\PrimitiveIOHelper.cs",
-              "RelativeToolTip": "Helpers\\PrimitiveIOHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ArgContainer.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\ArgContainer.cs",
+              "RelativeDocumentMoniker": "Utilities\\ArgContainer.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\ArgContainer.cs",
+              "RelativeToolTip": "Utilities\\ArgContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:32.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T22:26:59.624Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 226,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LogHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\LogHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\LogHelper.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Helpers\\LogHelper.cs",
-              "RelativeToolTip": "Helpers\\LogHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:52.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ExitCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ExitCommand.cs",
-              "RelativeDocumentMoniker": "BuiltInCommands\\ExitCommand.cs",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\BuiltInCommands\\ExitCommand.cs",
-              "RelativeToolTip": "BuiltInCommands\\ExitCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:48:32.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAwAAAAAAAAAACBjwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-29T08:22:52.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAACQAAAAAAAAAAIBZwDYAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-04-29T07:40:42.538Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

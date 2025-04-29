@@ -1,58 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Title>JustCLI</Title>
-    <Version>0.1.0-alpha</Version>
-    <Authors>Sebastian Bathrick</Authors>
-    <Description>A lightweight CLI framework that trims the fat.</Description>
-	<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
-	<PackageOutputPath>Release\</PackageOutputPath>
-    <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
-    <FileVersion>$(PackageVersion)</FileVersion>
-    <PackageId>JustCLInterface</PackageId>
-    <OutputType>Exe</OutputType>
-    <RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
-    <BaseOutputPath>Builds\</BaseOutputPath>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile></DocumentationFile>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-	<IncludeSymbols>true</IncludeSymbols>
-	<IncludeSource>true</IncludeSource>
-	<RepositoryType>git</RepositoryType>
-	<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
-	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>JustCLI</Title>
+		<Version>0.2.0-alpha</Version>
+		<Authors>Sebastian Bathrick</Authors>
+		<Description>A lightweight CLI framework that trims the fat.</Description>
+		<PackageProjectUrl>https://github.com/SebastianBathrick/JustCLI</PackageProjectUrl>
+		<AssemblyVersion>$(PackageVersion)</AssemblyVersion>
+		<FileVersion>$(PackageVersion)</FileVersion>
+		<PackageId>JustCLInterface</PackageId>
+		<OutputType>Library</OutputType>
+		<RepositoryUrl>https://github.com/SebastianBathrick/JustCLI/</RepositoryUrl>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<IncludeSource>true</IncludeSource>
+		<RepositoryType>git</RepositoryType>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageTags>CLI;CommandLine;Lightweight;Utility</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;1591</NoWarn>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;1591</NoWarn>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
 
-  <ItemGroup>
-	  <None Include="$(OutputPath)$(AssemblyName).xml" pack="true" packagePath="lib\netX.Y\" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="$(OutputPath)$(AssemblyName).xml">
+			<Pack>true</Pack>
+			<PackagePath>lib\net8.0\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Release\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Serilog" Version="4.2.1-dev-02352" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
-    <PackageReference Include="Xunit" Version="2.9.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
