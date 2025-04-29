@@ -28,15 +28,12 @@ publish/
 *.Publish.xml
 
 # NuGet
-*.nupkg
 *.snupkg
 *.nuspec
 *.cache
 *.lock.json
 .nuget/
 packages/
-# Optional NuGet local repo
-*.nupkg
 
 # Project-specific
 *.db

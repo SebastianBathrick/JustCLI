@@ -94,14 +94,11 @@ namespace JustCLI
                 {
                     if (_defaultCommand != null)
                         _defaultCommand.Execute(FlagInputContainer.Empty);
-                    else
+                    else if(requireCommand)
                     {
                         Log.Error("No arguments were provided.");
                         LogHelpDirections();
-
-                        // Forcefully exit to avoid unintended behavior in client's program.
-                        if (requireCommand)
-                            return;
+                        return;
                     }
                 }
                 else
