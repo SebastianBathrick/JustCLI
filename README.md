@@ -194,8 +194,8 @@ JustCLI provides several utility helper classes to simplify common operations:
 // Get primitive values from user
 string input = PrimitiveIOHelper.GetStringFromUser("input name");
 int number = PrimitiveIOHelper.GetIntFromUser("number");
-float decimal = PrimitiveIOHelper.GetFloatFromUser("decimal");
-bool flag = PrimitiveIOHelper.GetBoolFromUser("boolean");
+float decimalNum = PrimitiveIOHelper.GetFloatFromUser("decimal");
+bool myBool = PrimitiveIOHelper.GetBoolFromUser("boolean");
 ```
 
 ### PromptHelper
