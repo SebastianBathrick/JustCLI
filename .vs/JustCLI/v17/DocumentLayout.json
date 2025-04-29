@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Documents\\JustCLI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|solutionrelative:justcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA748A0-7E2D-42C1-AC9E-978BB18F8CB0}|JustCLI.csproj|c:\\users\\sebastian\\documents\\justcli\\utilities\\flaginputcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -106,12 +106,11 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-29T08:22:52.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T08:22:52.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Project.cs",
               "RelativeDocumentMoniker": "Project.cs",
@@ -124,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "JustCLI",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeDocumentMoniker": "JustCLI.csproj",
@@ -136,20 +135,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "JustCLI.csproj",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeDocumentMoniker": "JustCLI.csproj",
               "ToolTip": "C:\\Users\\Sebastian\\Documents\\JustCLI\\JustCLI.csproj",
               "RelativeToolTip": "JustCLI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-04-29T07:04:59.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LogHelper.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\Helpers\\LogHelper.cs",
               "RelativeDocumentMoniker": "Utilities\\Helpers\\LogHelper.cs",
@@ -157,12 +156,11 @@
               "RelativeToolTip": "Utilities\\Helpers\\LogHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:52.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:59:52.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Flag.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Core\\Flag.cs",
               "RelativeDocumentMoniker": "Core\\Flag.cs",
@@ -170,12 +168,11 @@
               "RelativeToolTip": "Core\\Flag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:31.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:57:31.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FileIOHelper.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\Helpers\\FileIOHelper.cs",
               "RelativeDocumentMoniker": "Utilities\\Helpers\\FileIOHelper.cs",
@@ -183,12 +180,11 @@
               "RelativeToolTip": "Utilities\\Helpers\\FileIOHelper.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAQwAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:57:55.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T04:57:55.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PrimitiveIOHelper.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\Helpers\\PrimitiveIOHelper.cs",
               "RelativeDocumentMoniker": "Utilities\\Helpers\\PrimitiveIOHelper.cs",
@@ -196,12 +192,11 @@
               "RelativeToolTip": "Utilities\\Helpers\\PrimitiveIOHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:32.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:40:32.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PromptHelper.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Documents\\JustCLI\\Utilities\\Helpers\\PromptHelper.cs",
               "RelativeDocumentMoniker": "Utilities\\Helpers\\PromptHelper.cs",
@@ -209,8 +204,7 @@
               "RelativeToolTip": "Utilities\\Helpers\\PromptHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T07:40:37.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T07:40:37.319Z"
             },
             {
               "$type": "Document",
