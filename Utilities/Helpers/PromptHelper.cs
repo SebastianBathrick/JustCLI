@@ -1,6 +1,5 @@
 ﻿using Serilog;
 
-
 namespace JustCLI.Utilities
 {
     public class PromptHelper

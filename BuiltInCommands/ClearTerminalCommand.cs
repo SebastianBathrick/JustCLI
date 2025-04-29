@@ -4,6 +4,8 @@ namespace JustCLI.BuiltInCommands
 {
     internal class ClearTerminalCommand : ICommand
     {
+        public const string NAME = "clear";
+
         public string Name => "clear";
         public string Description => "Clears the terminal of text.";
         public Flag[] Flags => Array.Empty<Flag>();

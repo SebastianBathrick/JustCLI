@@ -1,6 +1,5 @@
 ﻿using Serilog;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace JustCLI.Utilities
 {
@@ -146,6 +145,7 @@ namespace JustCLI.Utilities
             while (true);
         }
 
+        /// <summary> Opens an application with any provided arguments. </summary>
         public static void OpenApplication(string app, string args = "")
         {
             try

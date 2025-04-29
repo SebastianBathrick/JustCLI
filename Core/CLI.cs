@@ -1,6 +1,7 @@
 ﻿using JustCLI.BuiltInCommands;
 using JustCLI.Utilities;
 using Serilog;
+using Serilog.Core;
 
 namespace JustCLI
 {
@@ -11,16 +12,19 @@ namespace JustCLI
     {
         #region Variables
         private static CLI _instance = new CLI();
+        private static bool _isDiffLogger = false;
 
         // Built-In Commands
-        private HelpCommand _helpCommand;
-        private VersionCommand _versionCommand;
-        private CLIVersionCommand _cliVersionCommand;
-
-        private ICommand? _defaultCommand;
+        private HelpCommand? _helpCommand;
+        private VersionCommand? _versionCommand;
         private ArgContainer _argContainer;
         private Dictionary<string, ICommand> _commandDict;
+
+        private ICommand? _defaultCommand;
+        private ICommand[] _builtInCommands;
+
         private bool _isExiting = false;
+        
         #endregion
 
         #region Setup Methods
@@ -28,92 +32,43 @@ namespace JustCLI
         {
             _instance = this;
 
-            // GetValue the user's arguments from the command line (excluding the program name)
+            // Get the user's arguments from the command line (excluding the program name)
             _argContainer = new ArgContainer(Environment.GetCommandLineArgs());
             _argContainer.Get(); // Skip the first argument (the program path)
             _commandDict = new Dictionary<string, ICommand>();
-
-            // Add built-in commands
-            AddCommands([
+            _builtInCommands = [
                 _helpCommand = new HelpCommand(),
                 _versionCommand = new VersionCommand(),
-                _cliVersionCommand = new CLIVersionCommand(),
                 new ClearTerminalCommand(),
-                new OpenVSCommand(),
                 new ExitCommand(),
-                ]);
+                ];
 
-            // Instantiate Serilog logger
-            CreateLogger();
+            AddCommands(_builtInCommands);
+
+            if(!_isDiffLogger)
+                // Instantiate Serilog logger
+                CreateLogger();
         }
-        #endregion
-
-        #region Public Static Interface
-        /// <summary> 
-        /// Called by client to start reading commands (no commands should be added after calling.)
-        /// </summary>
-        /// <param name="requireCommand">Whether an error will be printed if there is no args. </param>
-        /// <param name="isPromptBeforeExit">Asks the user if they want to enter more arguments 
-        /// before exiting.</param>
-        /// <param name="argOverride">If not null overrides initial args provided to the program.</param>
-        public static void Start(
-            bool requireCommand = false,
-            bool isPromptBeforeExit = false,
-            string[]? argOverride = null
-            )
-        {
-            // Start just serves as a wrapper and StartInstance does as described by the docs
-            _instance.StartInstance(requireCommand: requireCommand,argOverride: argOverride);
-        }
-
-        /// <summary> Removes all client commands (including the default.) </summary>
-        public static void ClearCommands() =>
-            _instance = new CLI();
-
-        public static void SetExiting(bool isExiting=true)
-        {
-            _instance._isExiting = isExiting;
-            if (isExiting)
-                Log.Information("Exiting CLI.");             
-        }
-
-        /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
-        public static void AddDefaultCommand(ICommand command)
-        {
-            if (!command.HasNoRequiredFlags())
-            {
-                Log.Error("Default command {ICommand} cannot have required flags.", command.Name);
-                return;
-            }
-
-            _instance._defaultCommand = command;
-            AddCommands([command]);
-        }
-
-        /// <summary> Adds command to singleton instance. Should be called only before Start! </summary>
-        public static void AddCommands(ICommand[] commands)
-        {
-            foreach (var command in commands)
-                if (!IsCommandAlreadyAdded(command))
-                {
-                    if(command.MinFlagCount > command.Flags.Length)
-                        throw new Exception($"Command {command.Name} has more required flags than available. " +
-                            $"MinFlagCount: {command.MinFlagCount}, Flags: {command.Flags.Length}");
-                    else
-                        _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
-                }                    
-        }
-
-        /// <summary> 
-        /// Sets the version of the CLI application that will be shown when using
-        /// the built-in version command
-        /// </summary>
-        public static void SetVersion(string version) => _instance._versionCommand.SetVersion(version);
         #endregion
 
         #region Command Parsing & Execution
-        private void StartInstance(bool requireCommand = false, string[]? argOverride = null)
+        private void StartInstance(
+            bool requireCommand,
+            bool allowMoreCommands,
+            string[]? argOverride,
+            bool useBuiltInCommands
+            )
         {
+            if (!useBuiltInCommands)
+                foreach (var command in _commandDict.Values)
+                    RemoveCommand(command.Name);
+
+            if (_commandDict.Count == 0)
+            {
+                Log.Error("No commands are defined for the command line interface.");
+                return;
+            }
+
             // Add the client's and the built-in commands to the help command list.
             PopulateHelpList();
 
@@ -155,10 +110,14 @@ namespace JustCLI
 
                 // Enables the next pass to request args as input from user
                 isFirstPass = false;
+
+                if (!allowMoreCommands)
+                    _isExiting = true;
             }
             while (!_isExiting);
 
-            _isExiting = false; // Reset in case call is made again.
+            // Reset in case call is made again.
+            _isExiting = false; 
         }
 
         /// <summary> Parses each argument and executes commands in the order the user provided. </summary>
@@ -177,7 +136,7 @@ namespace JustCLI
                 else if (!_commandDict.ContainsKey(arg))
                 {
 
-                    Log.Error("ICommand {ICommand} is not a valid command.", arg);
+                    Log.Error("Command {Command} is not a valid command.", arg);
                     LogHelpDirections();
                     return;
                 }
@@ -193,11 +152,137 @@ namespace JustCLI
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e, "An error occurred while executing the command {ICommand}.", command.Name);
+                    Log.Error(e, "An error occurred while executing the command {Command}.", command.Name);
                 }
             }
             while (!_argContainer.IsEmpty);
         }
+        #endregion
+
+        #region Public Static Interface
+        /// <summary> 
+        /// Called by client to start reading commands (no commands should be added 
+        /// after calling.)
+        /// </summary>
+        /// <param name="requireCommand">Whether an error will be printed and the CLI
+        /// will exit if there are no args.</param>
+        /// <param name="allowMoreCommands">Whether the user is able to enter more 
+        /// commands after environment args.</param>
+        /// <param name="argOverride">If not null overrides initial args provided 
+        /// to the program.</param>
+        /// <param name="useBuiltInCommands">Whether or not built-in commands will 
+        /// be included in the interface</param>
+        public static void Start(
+            bool requireCommand = false,
+            bool allowMoreCommands = false,
+            string[]? argOverride = null,
+            bool useBuiltInCommands = true
+            )
+        {
+            // Start just serves as a wrapper and StartInstance does as described by the docs
+            _instance.StartInstance(requireCommand, allowMoreCommands, argOverride, useBuiltInCommands);
+        }
+
+        /// <summary> Removes previously added or built-in command. </summary>
+        /// <param name="commandName">Name of command to remove with no prefix.</param>
+        public static void RemoveCommand(string commandName)
+        {
+            string prefixedName = ICommand.PREFIX + commandName;
+            var cli = _instance;
+
+            if (!cli._commandDict.TryGetValue(prefixedName, out var command))
+            {
+                Log.Warning("Attempted to remove command {Name} but it does not exist.", commandName);
+                return;
+            }
+
+            cli._commandDict.Remove(prefixedName);
+
+            if (command == cli._versionCommand)
+                cli._versionCommand = null;
+            else if (command == cli._helpCommand)
+                cli._helpCommand = null;
+
+            if (cli._helpCommand != null)
+                cli._helpCommand.RemoveCommand(command);
+        }
+            
+
+        /// <summary> Removes all client and optionally built-in commands (including the default.) </summary>
+        public static void ClearCommands(bool excludeBuiltIns = true)
+        {
+            var keysToRemove = new List<string>();
+
+            foreach (var pair in _instance._commandDict)
+            {
+                if (excludeBuiltIns && _instance._builtInCommands.Contains(pair.Value))
+                    continue;
+                keysToRemove.Add(pair.Key);
+            }
+
+            foreach (var key in keysToRemove)
+                _instance._commandDict.Remove(key);
+        }
+
+        /// <summary> Adds all built in commands to CLI instance. </summary>
+
+        public static void SetExiting(bool isExiting=true)
+        {
+            _instance._isExiting = isExiting;
+            if (isExiting)
+                Log.Information("Exiting CLI.");             
+        }
+
+        /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
+        public static void AddDefaultCommand(ICommand command)
+        {
+            if (!command.HasNoRequiredFlags())
+            {
+                Log.Error("Default command {ICommand} cannot have required flags.", command.Name);
+                return;
+            }
+
+            _instance._defaultCommand = command;
+            AddCommands([command]);
+        }
+
+        /// <summary> Adds command(s) to singleton instance. Should be called only before Start! </summary>
+        public static void AddCommands(ICommand[] commands)
+        {
+            foreach (var command in commands)
+                AddCommand(command);    
+        }
+
+        /// <summary> Adds command to singleton instance. Should be called only before Start! </summary>
+        public static void AddCommand(ICommand command)
+        {
+            if (!IsCommandAlreadyAdded(command))
+            {
+                if (command.MinFlagCount > command.Flags.Length)
+                    throw new Exception($"Command {command.Name} has more required flags than available. " +
+                        $"MinFlagCount: {command.MinFlagCount}, Flags: {command.Flags.Length}");
+                else
+                    _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
+            }
+        }
+
+        /// <summary> 
+        /// Sets the version of the CLI application that will be shown when using
+        /// the built-in version command
+        /// </summary>
+        public static void SetVersion(string version)
+        {
+            if (_instance._versionCommand == null)
+            {
+                Log.Warning("Attempted to define version despite the {Command} being removed.", VersionCommand.NAME);
+                return;
+            }
+
+            _instance._versionCommand.SetVersion(version);
+        }
+        
+        public static void DefineLogger(Logger logger) =>
+            Log.Logger = logger;
         #endregion
 
         #region Flag Methods
@@ -301,7 +386,10 @@ namespace JustCLI
         #region Helper Methods
         private void LogHelpDirections()
         {
-            string helpFullName = ICommand.PREFIX + _helpCommand.Name;
+            if (_helpCommand == null)
+                return;
+
+            string helpFullName = ICommand.PREFIX + HelpCommand.NAME;
 
             Log.Information("Use {Help} to display all valid commands. Optionally follow with the {Detailed} flag to see valid flags.",
                 helpFullName, _helpCommand.Flags[0].name);
@@ -310,13 +398,12 @@ namespace JustCLI
         /// <summary> Populates the help command with all client and built-in commands </summary>
         private void PopulateHelpList()
         {
+            if (_helpCommand == null)
+                return;
+
             // Add all built-in and client commands to the help command list.
             foreach (var command in _commandDict.Values)
-                if (command is not CLIVersionCommand)
                     _helpCommand.AddCommand(command);
-
-            // Add the CLI version after the client's commands for ease of use
-            _helpCommand.AddCommand(_cliVersionCommand);
         }
 
         private static bool IsCommandAlreadyAdded(ICommand command) =>
@@ -330,7 +417,10 @@ namespace JustCLI
                     .WriteTo.Console()
                     .CreateLogger();
             else
+            {
+                _isDiffLogger = true;
                 Log.Logger = logger;
+            }             
         }
         #endregion
     }

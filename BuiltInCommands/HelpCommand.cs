@@ -9,6 +9,7 @@ namespace JustCLI.BuiltInCommands
     internal class HelpCommand : ICommand
     {
         #region Constants
+        public const string NAME = "help";
         private const string SCREEN_TITLE = "[CLI HELP]";
         private const string FLAGS_TITLE = "\tAssociated Flags:";
         private const string COMMAND_TITLE = "\t[COMMAND]:";
@@ -17,7 +18,7 @@ namespace JustCLI.BuiltInCommands
 
         private List<ICommand> _validCommands = new List<ICommand>();
 
-        public string Name => "help";
+        public string Name => NAME;
 
         public string Description => "Displays help information for commands.";
 
@@ -34,6 +35,17 @@ namespace JustCLI.BuiltInCommands
                 _validCommands.Add(command);
         }
 
+        public void RemoveCommand(ICommand command)
+        {
+            var removeCommands = new List<ICommand>();
+
+            foreach (var validCommand in _validCommands)
+                if (validCommand == command)
+                    removeCommands.Add(validCommand);
+
+            foreach(var removeCommand in removeCommands)
+                _validCommands.Remove(removeCommand);
+        }
 
         /// <summary> 
         /// Displays a list of valid commands, and optionally their flags, using Serialog instance.
@@ -78,6 +90,8 @@ namespace JustCLI.BuiltInCommands
                     );
             }
         }
+    
+        
     }
 }
 
