@@ -1,6 +1,6 @@
-﻿using JustCLI.Utilities;
+﻿using JustCLI.Core;
 
-namespace JustCLI
+namespace JustCLI.Commands
 {
     public interface ICommand
     {
@@ -19,7 +19,7 @@ namespace JustCLI
         /// <remarks>
         /// Important when there are multiple optional flags but at least one needs to be entered.
         /// </remarks>
-        int MinFlagCount => DEFAULT_MIN_FLAG_COUNT; 
+        int MinFlagCount => DEFAULT_MIN_FLAG_COUNT;
 
         /// <summary> Required and optional flags that can follow the command (or lack thereof) </summary>
         Flag[] Flags { get { return []; } }

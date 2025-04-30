@@ -20,6 +20,14 @@ namespace JustCLI.Logging.Default
         private MessageLevel _minLevel = MessageLevel.Debug;
         #endregion
 
+        #region Constructor
+        /// <summary>Initializes the logger and sets console encoding to UTF-8 for Unicode output.</summary>
+        public TerminalLogger() 
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+        }
+        #endregion
+
         #region Getter and Setter Methods
         public MessageLevel GetMinimumLogLevel() =>
             _minLevel;

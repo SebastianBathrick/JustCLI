@@ -1,6 +1,6 @@
 ﻿using JustCLI.Logging;
 
-namespace JustCLI.Helpers
+namespace JustCLI.ClientHelpers
 {
     public class PromptHelper
     {

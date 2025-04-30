@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using JustCLI.Logging;
 
-namespace JustCLI.Helpers
+namespace JustCLI.ClientHelpers
 {
     public static class FileIOHelper
     {

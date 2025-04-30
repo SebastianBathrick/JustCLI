@@ -1,8 +1,8 @@
 ﻿using JustCLI.Logging;
-using JustCLI.Utilities;
-using JustCLI.Helpers;
+using JustCLI.ClientHelpers;
+using JustCLI.Core;
 
-namespace JustCLI.BuiltInCommands
+namespace JustCLI.Commands
 {
     /// <summary>
     /// ICommand that displays help information for commands.

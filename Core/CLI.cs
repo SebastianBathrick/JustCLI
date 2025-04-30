@@ -1,6 +1,6 @@
-﻿using JustCLI.Utilities;
-using JustCLI.BuiltInCommands;
+﻿using JustCLI.Commands;
 using JustCLI.Logging;
+using JustCLI.Core;
 
 
 namespace JustCLI
@@ -294,7 +294,7 @@ namespace JustCLI
         }
 
         /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
-        public static void AddDefaultCommand(ICommand command)
+        public static void SetDefaultCommand(ICommand command)
         {
             if (!command.HasNoRequiredFlags())
             {

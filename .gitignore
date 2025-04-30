@@ -1,48 +1,59 @@
-# Build results
+# ========================
+# Build & Output Artifacts
+# ========================
 bin/
 obj/
 out/
-
-# User-specific files
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-
-# Rider and VS Code settings
-.idea/
-.vscode/
-.vscode-test/
-
-# OS junk
-.DS_Store
-Thumbs.db
-
-# ASP.NET temp files
-*.log
-*.vspscc
-*.vssscc
-
-# Publish results
 publish/
-*.Publish.xml
+Generated_Code/
 
-# NuGet
+# ====================
+# NuGet Artifacts
+# ====================
+*.nupkg
 *.snupkg
+*.symbols.nupkg
 *.nuspec
 *.cache
 *.lock.json
 .nuget/
 packages/
 
-# Project-specific
-*.db
-*.sqlite
-*.bak
-*.mdf
-*.ldf
+# ===============
+# User-Specific
+# ===============
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.DotSettings.user
+*.userprefs
 
-# Test results
+# ===============
+# IDE Settings
+# ===============
+.vs/
+.vscode/
+.idea/
+.vscode-test/
+_ReSharper*/
+*.resharper
+
+# ===============
+# Logs
+# ===============
+*.log
+
+# ===============
+# OS Junk
+# ===============
+.DS_Store
+Thumbs.db
+
+# =========================
+# Test Results & Coverage
+# =========================
 TestResults/
 *.coverage
 *.coveragexml
@@ -53,22 +64,16 @@ TestResults/
 *.vspx
 *.sap
 
-# Others
-_ReSharper*/
-*.resharper
-*.DotSettings.user
+# ========================
+# Miscellaneous
+# ========================
+*.db
+*.sqlite
+*.bak
+*.mdf
+*.ldf
 
-# JetBrains Rider
-.idea/
-
-# VS for Mac
-*.userprefs
-
-# Auto-generated
-Generated_Code/
-
-# Logs
-*.log
-
-# Tools (optional)
+# ========================
+# Optional Tools Folder
+# ========================
 tools/

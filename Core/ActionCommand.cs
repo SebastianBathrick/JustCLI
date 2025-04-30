@@ -1,4 +1,5 @@
-﻿using JustCLI.Utilities;
+﻿using JustCLI.Commands;
+using JustCLI.Core;
 
 namespace JustCLI
 {

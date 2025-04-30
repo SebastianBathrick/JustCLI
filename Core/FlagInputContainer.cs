@@ -1,4 +1,4 @@
-﻿namespace JustCLI.Utilities
+﻿namespace JustCLI.Core
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
     public class FlagInputContainer
