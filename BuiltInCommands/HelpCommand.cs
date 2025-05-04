@@ -1,8 +1,6 @@
-﻿using JustCLI.Logging;
-using JustCLI.ClientHelpers;
-using JustCLI.Core;
+﻿using JustCLI.ClientHelpers;
 
-namespace JustCLI.Commands
+namespace JustCLI.BuiltInCommands
 {
     /// <summary>
     /// ICommand that displays help information for commands.
@@ -11,12 +9,10 @@ namespace JustCLI.Commands
     {
         #region Constants
         public const string NAME = "help";
-        private const string SCREEN_TITLE = "[CLI HELP]";
-        private const string FLAGS_TITLE = "\tAssociated Flags:";
-        private const string COMMAND_TITLE = "\t[COMMAND]:";
-        private const string DETAILED_FLAG = "v";
+        private const string VERBOSE_FLAG = "v";
         #endregion
 
+        #region Properties
         private List<ICommand> _validCommands = new List<ICommand>();
 
         public string Name => NAME;
@@ -24,8 +20,9 @@ namespace JustCLI.Commands
         public string Description => "Displays help information for commands.";
 
         public Flag[] Flags => [
-            new Flag(DETAILED_FLAG, "Provides verbose command list and flag descriptions.", false)
+            new Flag(VERBOSE_FLAG, "Provides verbose command list and flag descriptions.", false)
             ];
+        #endregion
 
         /// <summary> 
         /// Adds a valid command to list when executed. Needs to be called in CLI's constructor. 
@@ -51,46 +48,42 @@ namespace JustCLI.Commands
         /// <summary> 
         /// Displays a list of valid commands, and optionally their flags, using Serialog instance.
         /// </summary>
-        public void Execute(FlagInputContainer flagEntries)
+        public void Execute(FlagContainer flagEntries)
         {
-            Log.Info("{Help}: The following is a list of valid commands:", SCREEN_TITLE);
-            LogHelper.LogExtraLine();
+            bool isDetailed = flagEntries.Contains(VERBOSE_FLAG);
+            string header;
 
-            bool isDetailed = flagEntries.IsFlag(DETAILED_FLAG);
+            if (!isDetailed)
+                header = "[Help]: The following is a list of valid commands:";
+            else
+                header = "[Verbose Help]: The following is a list of valid commands and their flags:";
+
+            LogHelper.LogWithMargin("{Help}", header);
 
             foreach (var command in _validCommands)
             {
-                if (isDetailed)
-                {
-                    Log.Info("{CommandTitle}", COMMAND_TITLE);
-                }
+                Log.Info("{Name}: " + command.Description, ICommand.PREFIX + command.Name);
 
-                Log.Info("\t{Name}: " + command.Description, ICommand.PREFIX + command.Name);
+                if(isDetailed && command.Flags.Count() > 0)
+                { 
+                    LogHelper.LogExtraLine();
 
-                if(isDetailed)
-                {
-                    if (command.Flags.Count() > 0)
-                    {
-                        LogHelper.LogExtraLine();
-                        Log.Info(FLAGS_TITLE);
-                        foreach (var flag in command.Flags)
-                            Log.Info("\t\t" + flag.ToString(), flag.name);
-                    }
+                    foreach (var flag in command.Flags)
+                        Log.Info($"\t" + flag.ToString(), flag.name);
+
+                    LogHelper.LogExtraLine();
                 }
+                
             }
 
             if (!isDetailed)
-            {
-                LogHelper.LogExtraLine();
-                Log.Info("{Note}: View a more detailed list by typing space and {Flag} after the {Help} command.",
+                LogHelper.LogWithMargin(
+                    "{Note}: View a more detailed list by typing space and {Flag} after the {Help} command.",
                     "Note",
                     Flags[0].name,
                     ICommand.PREFIX + Name
                     );
-            }
-        }
-    
-        
+        }      
     }
 }
 

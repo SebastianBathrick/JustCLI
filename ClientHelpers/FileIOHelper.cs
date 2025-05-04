@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using JustCLI.Logging;
 
 namespace JustCLI.ClientHelpers
 {

@@ -1,15 +1,18 @@
-﻿using JustCLI.Logging;
+﻿using System.Reflection.Metadata;
 
 namespace JustCLI.ClientHelpers
 {
     public static class LogHelper
     {
         /// <summary> Logs a header enclosed in square braces. </summary>
-        public static void PrintHeader(string header)
+        public static void LogHeader(string header)
         {
-            header = header.ToUpper();
             Log.Info("[{Header}]", header);
         }
+
+        /// <summary> Logs a message between two blank lines. </summary>
+        public static void LogWithMargin(string message, params object[] properties) =>
+            Log.Info($"\n{message}\n\n", properties);
 
         /// <summary> Logs a blank line. </summary>
         public static void LogExtraLine(int numLines = 1)
@@ -18,12 +21,6 @@ namespace JustCLI.ClientHelpers
             {
                 Log.Info("");
             }
-        }
-
-        /// <summary> Logs a line using subtract symbols. </summary>
-        public static void LogLineVisual()
-        {
-            Log.Info("--------------------------------------------------");
         }
     }
 }

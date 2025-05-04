@@ -1,6 +1,4 @@
-﻿using JustCLI.Core;
-
-namespace JustCLI.Commands
+﻿namespace JustCLI
 {
     public interface ICommand
     {
@@ -25,8 +23,8 @@ namespace JustCLI.Commands
         Flag[] Flags { get { return []; } }
 
         /// <summary> Defines what happens when the user enters this command into the CLI. </summary>
-        /// <param name="flagEntries">Holds flags the user entered and any values associated with them.</param>   
-        void Execute(FlagInputContainer flagEntries);
+        /// <param name="flagContainer">Holds flags the user entered and any values associated with them.</param>   
+        void Execute(FlagContainer flagContainer);
 
         /// <summary> Returns true and the flag of the given name if it exists. </summary>
         bool TryGetFlag(string flagName, out Flag? validFlag)

@@ -1,7 +1,7 @@
-﻿namespace JustCLI.Core
+﻿namespace JustCLI
 {
     /// <summary> Container for flags and values provided by the user after a command. </summary>
-    public class FlagInputContainer
+    public class FlagContainer
     {
         private List<Flag> _flags = new List<Flag>();
         private List<string?> _values = new List<string?>();
@@ -10,7 +10,7 @@
 
         public bool IsEmpty => _flags.Count == 0;
 
-        public static FlagInputContainer Empty => new FlagInputContainer();
+        public static FlagContainer Empty => new FlagContainer();
 
         /// <summary> Add a flag and value/null provided by user arguments. </summary>
         public void AddFlag(Flag flag, string? value = null)
@@ -28,17 +28,14 @@
             return _flags[0].name;
         }
 
-        /// <summary> 
-        /// Attempts to remove flag at the front of the structure and return its value.
-        /// </summary>
-        /// <param name="flagName">The name of the flag to search for.</param>
-        /// <param name="value">The value associated with the flag, if found.</param>
+
+        /// <summary> Attempts to retreive the value associated with a flag of the provided name. </summary>
         public bool TryGetValue(string flagName, out string? value)
         {
             value = null;
             flagName = VerifyFlagNamePrefix(flagName);
 
-            if (!IsFlag(flagName))
+            if (!Contains(flagName))
                 return false;
 
             for (int i = 0; i < _flags.Count; i++)
@@ -54,7 +51,7 @@
         /// <summary>
         /// Returns true if the flag of the given name is found in the container and false otherwise.
         /// </summary>
-        public bool IsFlag(string flagName)
+        public bool Contains(string flagName)
         {
             flagName = VerifyFlagNamePrefix(flagName);
 

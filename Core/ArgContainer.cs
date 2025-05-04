@@ -1,4 +1,4 @@
-﻿namespace JustCLI.Core
+﻿namespace JustCLI.Utilities
 {
     internal class ArgContainer
     {

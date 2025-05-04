@@ -1,7 +1,4 @@
-﻿using JustCLI.Commands;
-using JustCLI.Core;
-
-namespace JustCLI
+﻿namespace JustCLI
 {
     public class ActionCommand : ICommand
     {
@@ -10,9 +7,9 @@ namespace JustCLI
         public int MinFlagCount { get; } = ICommand.DEFAULT_MIN_FLAG_COUNT;
         public Flag[] Flags { get; }
 
-        private readonly Action<FlagInputContainer> _executeAction;
+        private readonly Action<FlagContainer> _executeAction;
 
-        public ActionCommand(string name, string description, Action<FlagInputContainer> executeAction, Flag[]? flags = null, int minFlagCount = ICommand.DEFAULT_MIN_FLAG_COUNT)
+        public ActionCommand(string name, string description, Action<FlagContainer> executeAction, Flag[]? flags = null, int minFlagCount = ICommand.DEFAULT_MIN_FLAG_COUNT)
         {
             Name = name;
             Description = description;
@@ -21,7 +18,7 @@ namespace JustCLI
             MinFlagCount = minFlagCount;
         }
 
-        public void Execute(FlagInputContainer flagEntries)
+        public void Execute(FlagContainer flagEntries)
         {
             _executeAction(flagEntries);
         }

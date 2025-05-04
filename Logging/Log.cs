@@ -1,6 +1,7 @@
 ﻿using JustCLI.Logging.Interface;
+using JustCLI.Logging;
 
-namespace JustCLI.Logging
+namespace JustCLI
 {
     /// <summary>Provides a static, global interface for logging messages with configurable output and severity filtering.</summary>
     public static class Log

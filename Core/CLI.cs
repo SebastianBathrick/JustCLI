@@ -1,7 +1,5 @@
-﻿using JustCLI.Commands;
-using JustCLI.Logging;
-using JustCLI.Core;
-
+﻿using JustCLI.BuiltInCommands;
+using JustCLI.Utilities;
 
 namespace JustCLI
 {
@@ -20,7 +18,7 @@ namespace JustCLI
         private Dictionary<string, ICommand> _commandDict;
         private ArgContainer _argContainer;
 
-        private bool _isExiting = false;       
+        private bool _isExiting = false; 
         #endregion
 
         #region Setup Methods
@@ -89,7 +87,7 @@ namespace JustCLI
                 if (_argContainer.IsEmpty)
                 {
                     if (_defaultCommand != null)
-                        _defaultCommand.Execute(FlagInputContainer.Empty);
+                        _defaultCommand.Execute(FlagContainer.Empty);
                     else if(requireCommand)
                     {
                         Log.Error("No arguments were provided.");
@@ -153,13 +151,13 @@ namespace JustCLI
 
         /// <summary> Gets any userFlagsAndValues trailing the current command and before the next command. </summary>
         /// <returns> Returns true if all flags and values (or lack-thereof) have been collected successfully. </returns>
-        private bool TryGetCommandFlags(ICommand command, out FlagInputContainer flagEntries)
+        private bool TryGetCommandFlags(ICommand command, out FlagContainer flagEntries)
         {
             var possibleFlags = GetPossibleFlagsOrValues();
             var validFlags = command.Flags;
 
             // Flags found + any values associated (if there are any of either)
-            flagEntries = new FlagInputContainer();
+            flagEntries = new FlagContainer();
 
             for (int i = 0; i < possibleFlags.Count; i++)
             {
@@ -190,7 +188,7 @@ namespace JustCLI
 
             // Check if all required flags were provided
             foreach (var flag in command.GetRequiredFlags())
-                if (!flagEntries.IsFlag(flag.name))
+                if (!flagEntries.Contains(flag.name))
                 {
                     Log.Error("Flag {Flag} is required but was not provided.", flag.name);
                     LogHelpDirections();
@@ -286,11 +284,10 @@ namespace JustCLI
         public static void ClearCommands(bool excludeBuiltIns = true) => _instance._commandDict.Clear();
 
         /// <summary> Adds all built in commands to CLI instance. </summary>
-        public static void SetExiting(bool isExiting=true)
+        public static void ForceExit(object? startReturnObj)
         {
-            _instance._isExiting = isExiting;
-            if (isExiting)
-                Log.Info("Exiting CLI.");             
+            _instance._isExiting = true;
+            Log.Info("Exiting CLI...");             
         }
 
         /// <summary> Assigns command to execute if no args are provided during the Start() method. </summary>
@@ -325,6 +322,10 @@ namespace JustCLI
                     _instance._commandDict.Add(ICommand.PREFIX + command.Name, command);
             }
         }
+
+        /// <summary> Exits after the current command is completed. </summary>
+        public static void Exit() =>
+            _instance._isExiting = true;
         #endregion
 
         #region Helper Methods
